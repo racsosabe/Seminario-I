@@ -23,7 +23,7 @@ def f(x, n):
 def df(x, n):
     ans = 0
     for i in range(2,n+1):
-        ans += -x * i ** (-x) * log(i)
+        ans += - i ** (-x) * log(i)
     return ans
 
 def M(s1, s2, n):
