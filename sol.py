@@ -153,7 +153,7 @@ class MutexAnswer:
 
 def solve(S, R, id):
     val = S.work(id)
-    while val[0] > 1:
+    while val[0] >= 1:
         if val[0] == 1:
             R.push(val[1])
         val = S.work(id)
