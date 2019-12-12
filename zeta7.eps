@@ -1,0 +1,3828 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: zeta7.eps
+%%Creator: gnuplot 5.2 patchlevel 2
+%%CreationDate: Thu Dec 12 10:44:42 2019
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.1 (Oct 2015)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (zeta7.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.2 patchlevel 2)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu Dec 12 10:44:42 2019)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
+1.000 UL
+LTb
+LCb setrgbcolor
+714 280 M
+63 0 V
+6170 0 R
+-63 0 V
+stroke
+630 280 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+714 1204 M
+63 0 V
+6170 0 R
+-63 0 V
+stroke
+630 1204 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 2000)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+714 2128 M
+63 0 V
+6170 0 R
+-63 0 V
+stroke
+630 2128 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 4000)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+714 3051 M
+63 0 V
+6170 0 R
+-63 0 V
+stroke
+630 3051 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 6000)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+714 3975 M
+63 0 V
+6170 0 R
+-63 0 V
+stroke
+630 3975 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 8000)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+714 4899 M
+63 0 V
+6170 0 R
+-63 0 V
+stroke
+630 4899 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 10000)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+714 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+714 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-6)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1493 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+1493 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2272 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+2272 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-4)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+3051 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+3051 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-3)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+3831 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+3831 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-2)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+4610 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+4610 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-1)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5389 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+5389 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+6168 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+6168 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+6947 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 2)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+714 4899 N
+714 280 L
+6233 0 V
+0 4619 V
+-6233 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+% Begin plot #1
+4.000 UL
+LTb
+0.58 0.00 0.83 C 5505 2590 Pnt
+6130 2593 Pnt
+5611 2594 Pnt
+5070 2596 Pnt
+5419 2597 Pnt
+6086 2598 Pnt
+5464 2600 Pnt
+5652 2601 Pnt
+2898 2605 Pnt
+5592 2603 Pnt
+5704 2606 Pnt
+5519 2607 Pnt
+5965 2609 Pnt
+5648 2611 Pnt
+4956 2611 Pnt
+5698 2614 Pnt
+5711 2615 Pnt
+5477 2616 Pnt
+5777 2618 Pnt
+6065 2619 Pnt
+3238 2622 Pnt
+5874 2622 Pnt
+5373 2623 Pnt
+5102 2625 Pnt
+4971 2628 Pnt
+5858 2627 Pnt
+5700 2630 Pnt
+5082 2631 Pnt
+5778 2632 Pnt
+5958 2634 Pnt
+5991 2636 Pnt
+5435 2638 Pnt
+4932 2639 Pnt
+5727 2640 Pnt
+3759 2642 Pnt
+6046 2643 Pnt
+5364 2645 Pnt
+4627 2646 Pnt
+5112 2647 Pnt
+5926 2648 Pnt
+5941 2651 Pnt
+5744 2652 Pnt
+5640 2654 Pnt
+5733 2656 Pnt
+5598 2657 Pnt
+4103 2658 Pnt
+5805 2659 Pnt
+6008 2661 Pnt
+3472 2663 Pnt
+5563 2664 Pnt
+5397 2665 Pnt
+5523 2667 Pnt
+5787 2669 Pnt
+5885 2670 Pnt
+6008 2672 Pnt
+5208 2673 Pnt
+5173 2674 Pnt
+5408 2676 Pnt
+6072 2677 Pnt
+4480 2680 Pnt
+5489 2681 Pnt
+3709 2682 Pnt
+5496 2682 Pnt
+6051 2685 Pnt
+5824 2686 Pnt
+5717 2688 Pnt
+5242 2690 Pnt
+5725 2690 Pnt
+5392 2693 Pnt
+5709 2694 Pnt
+5537 2695 Pnt
+5603 2697 Pnt
+2482 2699 Pnt
+5948 2699 Pnt
+5994 2701 Pnt
+5704 2703 Pnt
+5246 2704 Pnt
+5887 2706 Pnt
+5509 2707 Pnt
+5229 2709 Pnt
+5545 2710 Pnt
+6054 2712 Pnt
+5771 2714 Pnt
+5717 2715 Pnt
+3802 2717 Pnt
+4851 2717 Pnt
+5004 2720 Pnt
+5647 2719 Pnt
+6086 2722 Pnt
+5363 2724 Pnt
+4918 2725 Pnt
+5692 2727 Pnt
+6056 2728 Pnt
+5684 2730 Pnt
+5604 2731 Pnt
+5749 2733 Pnt
+3447 2735 Pnt
+5852 2735 Pnt
+5166 2737 Pnt
+5699 2739 Pnt
+5873 2740 Pnt
+4157 2741 Pnt
+5813 2743 Pnt
+5651 2744 Pnt
+5618 2746 Pnt
+5880 2748 Pnt
+5982 2749 Pnt
+4090 2752 Pnt
+5782 2751 Pnt
+5701 2753 Pnt
+4759 2755 Pnt
+5887 2757 Pnt
+4293 2758 Pnt
+5313 2760 Pnt
+5241 2761 Pnt
+5837 2762 Pnt
+6088 2764 Pnt
+5834 2765 Pnt
+5342 2767 Pnt
+5165 2769 Pnt
+5920 2770 Pnt
+4488 2772 Pnt
+5893 2773 Pnt
+3226 2776 Pnt
+5647 2775 Pnt
+5538 2777 Pnt
+5805 2778 Pnt
+5928 2780 Pnt
+5690 2782 Pnt
+5549 2783 Pnt
+5817 2785 Pnt
+5418 2786 Pnt
+5020 2788 Pnt
+5695 2789 Pnt
+6123 2791 Pnt
+3066 2793 Pnt
+5662 2794 Pnt
+5261 2795 Pnt
+5316 2796 Pnt
+5896 2798 Pnt
+5676 2799 Pnt
+5908 2802 Pnt
+4913 2803 Pnt
+5668 2804 Pnt
+5678 2806 Pnt
+6022 2807 Pnt
+5233 2809 Pnt
+2997 2812 Pnt
+5283 2811 Pnt
+5670 2812 Pnt
+6118 2815 Pnt
+5667 2816 Pnt
+5342 2818 Pnt
+5155 2819 Pnt
+5827 2820 Pnt
+5642 2822 Pnt
+5686 2824 Pnt
+5780 2825 Pnt
+5761 2827 Pnt
+5797 2828 Pnt
+2905 2830 Pnt
+5855 2831 Pnt
+5835 2833 Pnt
+4569 2834 Pnt
+5891 2836 Pnt
+5250 2837 Pnt
+5299 2838 Pnt
+5715 2840 Pnt
+6075 2841 Pnt
+5928 2844 Pnt
+5509 2845 Pnt
+4984 2846 Pnt
+4584 2848 Pnt
+5866 2849 Pnt
+4396 2850 Pnt
+5905 2852 Pnt
+4239 2854 Pnt
+5548 2854 Pnt
+5909 2856 Pnt
+5949 2858 Pnt
+5717 2860 Pnt
+5594 2861 Pnt
+5777 2862 Pnt
+4348 2865 Pnt
+5831 2865 Pnt
+5356 2867 Pnt
+5432 2869 Pnt
+3216 2871 Pnt
+5982 2870 Pnt
+5850 2873 Pnt
+5610 2874 Pnt
+5598 2876 Pnt
+5993 2878 Pnt
+5655 4340 Pnt
+5674 4342 Pnt
+5710 4344 Pnt
+5986 3781 Pnt
+5767 3783 Pnt
+5530 3784 Pnt
+5842 3817 Pnt
+5756 3819 Pnt
+5046 3820 Pnt
+5476 3754 Pnt
+5350 3756 Pnt
+5773 3758 Pnt
+5752 3763 Pnt
+5932 3765 Pnt
+6005 3766 Pnt
+5880 3745 Pnt
+5472 3747 Pnt
+5723 3748 Pnt
+4959 3758 Pnt
+6000 3750 Pnt
+2837 3752 Pnt
+5944 3752 Pnt
+5705 3761 Pnt
+5311 3762 Pnt
+4045 3772 Pnt
+6026 3774 Pnt
+5179 3775 Pnt
+4425 3769 Pnt
+5426 3769 Pnt
+4851 3777 Pnt
+5726 3771 Pnt
+5266 3778 Pnt
+5971 3779 Pnt
+5489 3786 Pnt
+5641 3787 Pnt
+5780 3821 Pnt
+5392 3823 Pnt
+5823 3824 Pnt
+4021 3789 Pnt
+5902 3790 Pnt
+3395 3793 Pnt
+5922 3792 Pnt
+5861 3866 Pnt
+3413 3865 Pnt
+5496 3862 Pnt
+5552 3863 Pnt
+6064 3853 Pnt
+5269 3854 Pnt
+5097 3855 Pnt
+5718 3857 Pnt
+6107 3858 Pnt
+5368 3826 Pnt
+2663 3829 Pnt
+5710 3861 Pnt
+5486 3828 Pnt
+5874 3829 Pnt
+5173 3867 Pnt
+5794 3869 Pnt
+6074 3832 Pnt
+5738 3833 Pnt
+5620 3794 Pnt
+5657 3795 Pnt
+5661 3798 Pnt
+5292 3835 Pnt
+5707 3837 Pnt
+5609 3837 Pnt
+5755 3799 Pnt
+5849 3800 Pnt
+5964 3803 Pnt
+4310 3871 Pnt
+5777 3871 Pnt
+5845 3874 Pnt
+5796 3875 Pnt
+5616 3877 Pnt
+5797 3878 Pnt
+5946 3880 Pnt
+5274 3840 Pnt
+5615 3841 Pnt
+6006 3842 Pnt
+5112 3804 Pnt
+5091 3805 Pnt
+5481 3807 Pnt
+3724 3882 Pnt
+5740 3844 Pnt
+5697 3846 Pnt
+5886 3882 Pnt
+3067 3847 Pnt
+5658 3884 Pnt
+6100 3808 Pnt
+3792 3810 Pnt
+5503 3811 Pnt
+5447 3848 Pnt
+5721 3850 Pnt
+5040 3851 Pnt
+4898 3886 Pnt
+5842 3887 Pnt
+4221 3888 Pnt
+4674 3812 Pnt
+5313 3813 Pnt
+6037 3815 Pnt
+5986 4394 Pnt
+4088 4395 Pnt
+5861 4397 Pnt
+4991 4398 Pnt
+5362 4400 Pnt
+5539 4345 Pnt
+5909 4402 Pnt
+5823 4347 Pnt
+5148 4348 Pnt
+5584 4322 Pnt
+5861 4323 Pnt
+5653 4327 Pnt
+5287 4328 Pnt
+5400 4330 Pnt
+6080 4326 Pnt
+6031 4403 Pnt
+5836 4405 Pnt
+5218 4406 Pnt
+5554 4349 Pnt
+5740 4351 Pnt
+6103 4352 Pnt
+5874 4331 Pnt
+4967 4333 Pnt
+5746 4334 Pnt
+5964 4336 Pnt
+2578 4338 Pnt
+5864 4339 Pnt
+5220 4357 Pnt
+4892 4358 Pnt
+3444 4355 Pnt
+5547 4355 Pnt
+5527 4407 Pnt
+4654 4410 Pnt
+5874 4410 Pnt
+5599 3908 Pnt
+5870 3909 Pnt
+6001 3911 Pnt
+5669 3913 Pnt
+5351 4431 Pnt
+5817 4432 Pnt
+3032 4432 Pnt
+5658 4434 Pnt
+5793 4368 Pnt
+5841 4369 Pnt
+5478 4370 Pnt
+6095 4439 Pnt
+5585 4440 Pnt
+5008 4442 Pnt
+5464 4443 Pnt
+5404 4372 Pnt
+3056 4374 Pnt
+5486 4363 Pnt
+5659 4373 Pnt
+6062 4360 Pnt
+5554 4361 Pnt
+4992 4364 Pnt
+5963 4365 Pnt
+5597 4436 Pnt
+5602 4437 Pnt
+6116 4445 Pnt
+5321 4447 Pnt
+5575 4448 Pnt
+4853 4412 Pnt
+5527 4414 Pnt
+3573 4415 Pnt
+5872 4416 Pnt
+6026 4418 Pnt
+5816 4419 Pnt
+6075 4376 Pnt
+5726 4378 Pnt
+4636 4379 Pnt
+5496 4381 Pnt
+5742 4382 Pnt
+5598 4384 Pnt
+5344 4450 Pnt
+3087 4451 Pnt
+5788 4452 Pnt
+5638 4453 Pnt
+5994 4455 Pnt
+5575 4421 Pnt
+5713 4423 Pnt
+5765 4424 Pnt
+5155 4458 Pnt
+5495 4457 Pnt
+5634 4460 Pnt
+5830 4461 Pnt
+3926 4391 Pnt
+5710 4385 Pnt
+5406 4390 Pnt
+5959 4387 Pnt
+5434 4463 Pnt
+5729 4464 Pnt
+6025 4466 Pnt
+5895 4389 Pnt
+5428 4393 Pnt
+4627 4426 Pnt
+5717 4427 Pnt
+5856 4428 Pnt
+5536 3890 Pnt
+5420 3891 Pnt
+5815 3893 Pnt
+5466 3914 Pnt
+6067 3895 Pnt
+5833 3896 Pnt
+5171 2897 Pnt
+5416 2898 Pnt
+5969 2899 Pnt
+5194 2902 Pnt
+5718 2903 Pnt
+5890 2904 Pnt
+4007 2888 Pnt
+4637 2889 Pnt
+2621 2906 Pnt
+5807 2907 Pnt
+5590 2908 Pnt
+5437 2890 Pnt
+5732 2892 Pnt
+5229 2881 Pnt
+5045 2881 Pnt
+5801 2879 Pnt
+6127 2894 Pnt
+5669 2895 Pnt
+5991 2883 Pnt
+5192 2885 Pnt
+5780 2886 Pnt
+5773 2910 Pnt
+5684 2912 Pnt
+5281 2913 Pnt
+5818 2915 Pnt
+5339 2916 Pnt
+5484 2917 Pnt
+5794 2919 Pnt
+6117 2921 Pnt
+5684 2923 Pnt
+4081 2960 Pnt
+5574 2961 Pnt
+6040 2962 Pnt
+3639 2924 Pnt
+3245 2943 Pnt
+5719 2942 Pnt
+5255 2925 Pnt
+6073 2944 Pnt
+4692 2926 Pnt
+4889 2932 Pnt
+5897 2933 Pnt
+5900 2936 Pnt
+5986 2928 Pnt
+5358 2929 Pnt
+5603 2931 Pnt
+5910 2937 Pnt
+5461 2939 Pnt
+5359 2940 Pnt
+5661 2946 Pnt
+4512 2947 Pnt
+5270 2949 Pnt
+5804 2950 Pnt
+5742 2952 Pnt
+5698 2953 Pnt
+5849 2955 Pnt
+3806 2964 Pnt
+5907 2957 Pnt
+5772 2965 Pnt
+5530 2958 Pnt
+4992 2966 Pnt
+5316 2968 Pnt
+5197 3898 Pnt
+5035 3899 Pnt
+5978 3900 Pnt
+5820 2987 Pnt
+5594 2989 Pnt
+5599 2991 Pnt
+5386 3005 Pnt
+6066 3007 Pnt
+5554 3008 Pnt
+5945 2973 Pnt
+5249 2975 Pnt
+5397 2976 Pnt
+5871 2970 Pnt
+5984 2971 Pnt
+5723 2992 Pnt
+5069 3010 Pnt
+5484 3011 Pnt
+6110 3013 Pnt
+5112 2994 Pnt
+5559 2995 Pnt
+5603 3015 Pnt
+5626 3016 Pnt
+5190 3018 Pnt
+5111 2978 Pnt
+5921 2979 Pnt
+4732 2980 Pnt
+5587 2982 Pnt
+5930 3000 Pnt
+5560 2999 Pnt
+2667 3001 Pnt
+3322 3019 Pnt
+5763 2997 Pnt
+5630 3020 Pnt
+5419 3021 Pnt
+5777 3002 Pnt
+5610 3004 Pnt
+3215 2984 Pnt
+5835 2984 Pnt
+6050 2986 Pnt
+5600 3916 Pnt
+5594 3917 Pnt
+4962 3918 Pnt
+5730 3920 Pnt
+4458 3902 Pnt
+5891 3903 Pnt
+6073 3921 Pnt
+2690 3923 Pnt
+5798 3924 Pnt
+3617 3906 Pnt
+5343 3905 Pnt
+5527 4502 Pnt
+5537 4503 Pnt
+2678 4468 Pnt
+5953 4468 Pnt
+5533 4470 Pnt
+3905 4504 Pnt
+5895 4506 Pnt
+5769 4473 Pnt
+5173 4474 Pnt
+5301 4472 Pnt
+4419 4485 Pnt
+5313 4484 Pnt
+5936 4508 Pnt
+5696 4487 Pnt
+4013 4488 Pnt
+3532 4509 Pnt
+5670 4510 Pnt
+5634 4511 Pnt
+5615 4513 Pnt
+5782 4515 Pnt
+5664 4476 Pnt
+5268 4477 Pnt
+5807 4479 Pnt
+5908 4516 Pnt
+5951 4519 Pnt
+5003 4520 Pnt
+5914 4481 Pnt
+5993 4482 Pnt
+6063 4490 Pnt
+5305 4491 Pnt
+4825 4493 Pnt
+6117 3945 Pnt
+5647 3947 Pnt
+5387 4523 Pnt
+6071 4524 Pnt
+5521 3925 Pnt
+5139 4521 Pnt
+5496 3927 Pnt
+5831 3929 Pnt
+5074 3940 Pnt
+4722 3941 Pnt
+4012 3942 Pnt
+5291 3943 Pnt
+5657 3930 Pnt
+5691 3937 Pnt
+6065 3938 Pnt
+5649 3934 Pnt
+5883 3932 Pnt
+4943 3933 Pnt
+3792 4526 Pnt
+5537 4527 Pnt
+4662 4528 Pnt
+5422 4529 Pnt
+5396 3948 Pnt
+5064 3950 Pnt
+5931 3951 Pnt
+6054 4531 Pnt
+5872 4533 Pnt
+5337 4494 Pnt
+5992 4495 Pnt
+5937 4497 Pnt
+5688 3953 Pnt
+5751 3954 Pnt
+5663 3956 Pnt
+5631 3958 Pnt
+2822 3960 Pnt
+5733 3959 Pnt
+5700 4535 Pnt
+5101 4536 Pnt
+5803 4537 Pnt
+5743 4499 Pnt
+5582 4500 Pnt
+5925 3980 Pnt
+4354 3981 Pnt
+5907 3983 Pnt
+5242 4539 Pnt
+5795 4540 Pnt
+5404 4542 Pnt
+4735 3984 Pnt
+5330 3985 Pnt
+5919 3987 Pnt
+6008 3988 Pnt
+5983 3961 Pnt
+5799 3963 Pnt
+5748 3990 Pnt
+4653 3964 Pnt
+5435 3992 Pnt
+5725 3970 Pnt
+6053 3972 Pnt
+5914 3974 Pnt
+4409 3977 Pnt
+4915 3978 Pnt
+5428 3975 Pnt
+5739 3966 Pnt
+5456 3967 Pnt
+5428 3969 Pnt
+5688 3993 Pnt
+4298 3995 Pnt
+5866 3996 Pnt
+5628 4557 Pnt
+6041 4558 Pnt
+5681 4560 Pnt
+5447 4544 Pnt
+2763 4545 Pnt
+5872 4545 Pnt
+3091 4563 Pnt
+5622 4561 Pnt
+5373 4564 Pnt
+6054 4548 Pnt
+5739 4549 Pnt
+5336 4551 Pnt
+5699 4566 Pnt
+5242 4567 Pnt
+6071 4569 Pnt
+5279 4570 Pnt
+5120 4571 Pnt
+5709 4573 Pnt
+5778 4553 Pnt
+5603 4553 Pnt
+5164 4556 Pnt
+5447 3095 Pnt
+4676 3096 Pnt
+5210 3097 Pnt
+5001 3104 Pnt
+5749 3105 Pnt
+5505 3107 Pnt
+5865 3108 Pnt
+5350 3110 Pnt
+5509 3112 Pnt
+6012 3100 Pnt
+5803 3101 Pnt
+5810 3103 Pnt
+5196 3997 Pnt
+3424 4001 Pnt
+5017 3059 Pnt
+4895 3061 Pnt
+5180 3062 Pnt
+5459 3999 Pnt
+5939 4001 Pnt
+6010 3050 Pnt
+5529 3053 Pnt
+4435 3053 Pnt
+4902 3026 Pnt
+6051 3024 Pnt
+5538 3025 Pnt
+5821 3042 Pnt
+4681 3042 Pnt
+5738 3045 Pnt
+5665 3028 Pnt
+5919 3029 Pnt
+5522 3031 Pnt
+3047 3037 Pnt
+5926 3036 Pnt
+5396 3038 Pnt
+5712 3033 Pnt
+5967 3034 Pnt
+5415 3040 Pnt
+4163 3056 Pnt
+5984 3058 Pnt
+5739 3055 Pnt
+5359 3046 Pnt
+5699 3047 Pnt
+5943 3049 Pnt
+5940 3063 Pnt
+5943 4003 Pnt
+5722 4005 Pnt
+6027 3065 Pnt
+5790 3067 Pnt
+5722 3071 Pnt
+5454 3070 Pnt
+5488 3068 Pnt
+2605 3114 Pnt
+5870 3113 Pnt
+6088 3116 Pnt
+4164 3073 Pnt
+5899 3074 Pnt
+5899 3076 Pnt
+5728 3117 Pnt
+5263 3119 Pnt
+5619 3121 Pnt
+5613 3121 Pnt
+5596 4006 Pnt
+5895 4008 Pnt
+5786 4009 Pnt
+5384 3124 Pnt
+5604 3125 Pnt
+5964 3126 Pnt
+3281 3077 Pnt
+5563 3078 Pnt
+5677 3080 Pnt
+5969 3087 Pnt
+5205 3088 Pnt
+5062 3089 Pnt
+5554 3091 Pnt
+6122 3092 Pnt
+5714 3082 Pnt
+5730 3083 Pnt
+3871 3094 Pnt
+5781 3084 Pnt
+5787 3128 Pnt
+5755 3130 Pnt
+4645 4012 Pnt
+5565 4012 Pnt
+5958 4014 Pnt
+5195 4016 Pnt
+5752 4017 Pnt
+3450 4018 Pnt
+5749 4585 Pnt
+4519 4587 Pnt
+5742 4587 Pnt
+6104 4574 Pnt
+5621 4577 Pnt
+5491 4578 Pnt
+3115 4581 Pnt
+5621 4579 Pnt
+5297 4020 Pnt
+5533 4021 Pnt
+5923 4582 Pnt
+5340 4583 Pnt
+5719 4022 Pnt
+5817 4590 Pnt
+5759 4591 Pnt
+3806 3149 Pnt
+5789 3150 Pnt
+5620 4592 Pnt
+5813 4594 Pnt
+4943 3151 Pnt
+5964 4595 Pnt
+3090 3131 Pnt
+5520 3132 Pnt
+5718 3141 Pnt
+6103 3143 Pnt
+5764 3134 Pnt
+4824 3135 Pnt
+6048 3137 Pnt
+5247 3138 Pnt
+5090 3140 Pnt
+5791 3145 Pnt
+5513 3146 Pnt
+5478 3147 Pnt
+5830 3153 Pnt
+4118 3155 Pnt
+5795 3155 Pnt
+5865 3158 Pnt
+3520 4598 Pnt
+5886 4598 Pnt
+5696 4600 Pnt
+4729 4602 Pnt
+5808 4603 Pnt
+4592 4604 Pnt
+5775 3162 Pnt
+5920 3164 Pnt
+3945 3166 Pnt
+5876 3166 Pnt
+5826 3159 Pnt
+5625 3161 Pnt
+5464 4606 Pnt
+5431 4607 Pnt
+5879 4608 Pnt
+6126 4024 Pnt
+5630 4026 Pnt
+5093 4027 Pnt
+5395 4029 Pnt
+6058 4030 Pnt
+5170 4032 Pnt
+5374 4685 Pnt
+5739 4686 Pnt
+5156 4666 Pnt
+5932 4667 Pnt
+5432 4683 Pnt
+6085 4688 Pnt
+5872 4690 Pnt
+5346 4691 Pnt
+6093 4051 Pnt
+2919 4054 Pnt
+5845 4054 Pnt
+5457 4055 Pnt
+5596 4669 Pnt
+3953 569 Pnt
+5229 570 Pnt
+5712 4672 Pnt
+5824 572 Pnt
+5724 4670 Pnt
+4294 573 Pnt
+5857 4648 Pnt
+4881 4649 Pnt
+5703 4650 Pnt
+5578 4737 Pnt
+5800 4738 Pnt
+6113 4740 Pnt
+5627 4652 Pnt
+6034 4654 Pnt
+5660 4628 Pnt
+5550 4630 Pnt
+5711 4636 Pnt
+6082 4637 Pnt
+4916 4634 Pnt
+5631 4632 Pnt
+5469 4633 Pnt
+5013 4615 Pnt
+5953 4616 Pnt
+4258 4618 Pnt
+6055 4611 Pnt
+5823 4612 Pnt
+5933 4619 Pnt
+5173 4614 Pnt
+4904 4656 Pnt
+4757 4657 Pnt
+4049 4658 Pnt
+5403 4659 Pnt
+2770 4675 Pnt
+5628 4674 Pnt
+5704 4675 Pnt
+5956 4677 Pnt
+2739 4639 Pnt
+5802 4640 Pnt
+5520 4641 Pnt
+5430 4621 Pnt
+3693 4622 Pnt
+5652 4624 Pnt
+5895 4625 Pnt
+5954 4627 Pnt
+6133 4661 Pnt
+5693 4662 Pnt
+5356 4664 Pnt
+5480 4643 Pnt
+5873 4645 Pnt
+5731 4646 Pnt
+5790 4679 Pnt
+4778 4680 Pnt
+5811 4682 Pnt
+4423 4693 Pnt
+4722 4694 Pnt
+5882 4695 Pnt
+4611 4696 Pnt
+5910 4699 Pnt
+4717 4700 Pnt
+6044 575 Pnt
+5207 576 Pnt
+4854 577 Pnt
+5626 4742 Pnt
+5124 4743 Pnt
+5366 4745 Pnt
+5906 4719 Pnt
+5701 4721 Pnt
+6031 4746 Pnt
+5017 4748 Pnt
+5636 4722 Pnt
+5706 4749 Pnt
+5581 4728 Pnt
+5979 4730 Pnt
+4939 4732 Pnt
+5432 4701 Pnt
+5917 4703 Pnt
+3946 4711 Pnt
+6006 4704 Pnt
+2690 4752 Pnt
+5929 4712 Pnt
+5771 4751 Pnt
+5310 4713 Pnt
+5365 4715 Pnt
+3710 4717 Pnt
+5912 4717 Pnt
+5688 4706 Pnt
+5464 4708 Pnt
+5735 4709 Pnt
+5693 4733 Pnt
+3798 4734 Pnt
+5222 4735 Pnt
+5921 4724 Pnt
+5798 4725 Pnt
+4498 4727 Pnt
+5876 4753 Pnt
+5711 4755 Pnt
+5663 579 Pnt
+6048 580 Pnt
+5008 587 Pnt
+5474 588 Pnt
+4433 589 Pnt
+5818 591 Pnt
+3489 593 Pnt
+5928 593 Pnt
+5744 597 Pnt
+5625 598 Pnt
+5811 600 Pnt
+5847 595 Pnt
+4537 604 Pnt
+5836 604 Pnt
+5894 601 Pnt
+5897 582 Pnt
+5625 584 Pnt
+5547 585 Pnt
+5054 4057 Pnt
+5915 4059 Pnt
+5325 4060 Pnt
+5788 625 Pnt
+5454 627 Pnt
+5152 624 Pnt
+5770 822 Pnt
+5843 823 Pnt
+6050 825 Pnt
+5505 612 Pnt
+5197 613 Pnt
+5563 606 Pnt
+3401 610 Pnt
+5334 608 Pnt
+6006 609 Pnt
+5673 4178 Pnt
+5893 4180 Pnt
+6002 4181 Pnt
+5429 620 Pnt
+5078 621 Pnt
+5968 622 Pnt
+5597 614 Pnt
+6101 616 Pnt
+5823 618 Pnt
+3130 629 Pnt
+5337 629 Pnt
+5741 630 Pnt
+3830 4184 Pnt
+5709 4183 Pnt
+5736 4185 Pnt
+4406 4187 Pnt
+5928 4188 Pnt
+4868 4189 Pnt
+5583 427 Pnt
+5654 429 Pnt
+5735 425 Pnt
+5549 432 Pnt
+5317 433 Pnt
+5603 429 Pnt
+4984 286 Pnt
+5886 287 Pnt
+6015 281 Pnt
+5642 282 Pnt
+5201 284 Pnt
+4282 288 Pnt
+4952 497 Pnt
+5503 506 Pnt
+5614 508 Pnt
+5736 509 Pnt
+4943 499 Pnt
+4449 500 Pnt
+5866 501 Pnt
+5881 290 Pnt
+3477 292 Pnt
+5740 291 Pnt
+5755 434 Pnt
+5719 436 Pnt
+6009 438 Pnt
+2850 439 Pnt
+5668 440 Pnt
+5534 442 Pnt
+6060 503 Pnt
+5797 504 Pnt
+5875 294 Pnt
+5872 295 Pnt
+5765 297 Pnt
+4564 511 Pnt
+5797 512 Pnt
+5947 513 Pnt
+5890 353 Pnt
+5280 354 Pnt
+5438 355 Pnt
+5071 443 Pnt
+6082 445 Pnt
+5504 446 Pnt
+5829 357 Pnt
+6115 358 Pnt
+5722 361 Pnt
+3214 516 Pnt
+4783 362 Pnt
+5161 363 Pnt
+5339 516 Pnt
+4109 364 Pnt
+5946 366 Pnt
+5568 517 Pnt
+5100 367 Pnt
+5666 369 Pnt
+4602 370 Pnt
+5652 299 Pnt
+5734 300 Pnt
+5715 302 Pnt
+4950 303 Pnt
+5340 304 Pnt
+5572 306 Pnt
+5677 519 Pnt
+5702 521 Pnt
+5658 522 Pnt
+5142 448 Pnt
+5383 449 Pnt
+6070 450 Pnt
+5730 454 Pnt
+5410 455 Pnt
+5773 453 Pnt
+6039 524 Pnt
+5353 525 Pnt
+5085 527 Pnt
+3573 381 Pnt
+5997 382 Pnt
+5684 384 Pnt
+4565 386 Pnt
+4669 387 Pnt
+5732 387 Pnt
+5563 376 Pnt
+5808 371 Pnt
+5543 378 Pnt
+5798 379 Pnt
+5957 373 Pnt
+5909 375 Pnt
+4046 458 Pnt
+5128 458 Pnt
+4992 459 Pnt
+2802 309 Pnt
+6067 308 Pnt
+5793 310 Pnt
+5493 312 Pnt
+5459 313 Pnt
+6020 315 Pnt
+5598 528 Pnt
+6138 530 Pnt
+5166 532 Pnt
+4224 402 Pnt
+5686 403 Pnt
+5766 390 Pnt
+5666 391 Pnt
+5787 392 Pnt
+4456 404 Pnt
+5049 406 Pnt
+4551 397 Pnt
+5964 321 Pnt
+5466 398 Pnt
+5994 395 Pnt
+5646 396 Pnt
+6077 400 Pnt
+5760 316 Pnt
+4956 319 Pnt
+5524 319 Pnt
+5495 323 Pnt
+5853 324 Pnt
+6043 461 Pnt
+4515 464 Pnt
+5695 463 Pnt
+5664 466 Pnt
+5846 467 Pnt
+5601 469 Pnt
+5013 326 Pnt
+3796 327 Pnt
+4956 328 Pnt
+5588 329 Pnt
+3588 535 Pnt
+5243 533 Pnt
+5149 535 Pnt
+2530 552 Pnt
+5950 551 Pnt
+6039 553 Pnt
+5670 555 Pnt
+5056 542 Pnt
+5603 543 Pnt
+5653 545 Pnt
+5852 546 Pnt
+5969 537 Pnt
+5682 538 Pnt
+5866 541 Pnt
+5477 548 Pnt
+5741 470 Pnt
+5970 472 Pnt
+5658 550 Pnt
+4107 475 Pnt
+5875 474 Pnt
+4974 476 Pnt
+5368 478 Pnt
+6137 332 Pnt
+5694 333 Pnt
+5147 557 Pnt
+5665 558 Pnt
+5379 559 Pnt
+5963 479 Pnt
+4104 480 Pnt
+5757 482 Pnt
+6012 411 Pnt
+5424 412 Pnt
+5119 334 Pnt
+5447 336 Pnt
+5896 409 Pnt
+5819 407 Pnt
+5912 337 Pnt
+5338 413 Pnt
+2929 345 Pnt
+5409 339 Pnt
+5708 340 Pnt
+5925 342 Pnt
+5204 483 Pnt
+5595 485 Pnt
+5980 487 Pnt
+5735 344 Pnt
+5424 345 Pnt
+5506 561 Pnt
+5516 562 Pnt
+5930 564 Pnt
+5357 415 Pnt
+5913 416 Pnt
+5026 418 Pnt
+5654 420 Pnt
+5661 490 Pnt
+4850 491 Pnt
+5998 488 Pnt
+5737 492 Pnt
+5729 348 Pnt
+5791 350 Pnt
+4491 494 Pnt
+4926 350 Pnt
+5926 495 Pnt
+2589 422 Pnt
+5930 421 Pnt
+6015 424 Pnt
+5904 566 Pnt
+5853 567 Pnt
+6051 633 Pnt
+5717 634 Pnt
+5275 635 Pnt
+5697 638 Pnt
+5642 638 Pnt
+5193 640 Pnt
+5166 4191 Pnt
+5334 4193 Pnt
+5948 4194 Pnt
+5353 827 Pnt
+5193 828 Pnt
+5441 830 Pnt
+5723 642 Pnt
+6080 643 Pnt
+5790 651 Pnt
+5332 652 Pnt
+5965 654 Pnt
+3118 647 Pnt
+5714 646 Pnt
+5290 647 Pnt
+5397 649 Pnt
+5034 655 Pnt
+5483 656 Pnt
+5651 677 Pnt
+5802 658 Pnt
+6092 659 Pnt
+5500 662 Pnt
+5213 663 Pnt
+5760 679 Pnt
+5845 681 Pnt
+3306 682 Pnt
+5924 683 Pnt
+5838 685 Pnt
+4363 687 Pnt
+5614 688 Pnt
+3222 665 Pnt
+5121 689 Pnt
+5554 664 Pnt
+6046 667 Pnt
+5501 670 Pnt
+5863 704 Pnt
+4699 672 Pnt
+5841 672 Pnt
+5452 668 Pnt
+5333 706 Pnt
+4015 706 Pnt
+5847 675 Pnt
+5779 676 Pnt
+6030 696 Pnt
+5637 697 Pnt
+4864 699 Pnt
+5112 700 Pnt
+6012 701 Pnt
+4188 703 Pnt
+5879 709 Pnt
+5928 710 Pnt
+5477 691 Pnt
+5647 692 Pnt
+5879 712 Pnt
+5953 694 Pnt
+5678 4033 Pnt
+5717 4035 Pnt
+2706 4036 Pnt
+5834 4037 Pnt
+5616 4062 Pnt
+2887 836 Pnt
+6051 831 Pnt
+4936 833 Pnt
+5565 834 Pnt
+5722 836 Pnt
+6031 838 Pnt
+5664 4039 Pnt
+5881 4041 Pnt
+5051 4063 Pnt
+5889 4064 Pnt
+5761 840 Pnt
+5705 842 Pnt
+5387 843 Pnt
+3828 796 Pnt
+6004 797 Pnt
+5461 798 Pnt
+5936 725 Pnt
+5656 726 Pnt
+4678 800 Pnt
+2632 723 Pnt
+6038 722 Pnt
+4575 801 Pnt
+5865 802 Pnt
+5543 791 Pnt
+5249 793 Pnt
+5759 794 Pnt
+5732 786 Pnt
+5986 788 Pnt
+5973 789 Pnt
+5522 713 Pnt
+5588 715 Pnt
+5301 717 Pnt
+5570 717 Pnt
+5161 719 Pnt
+5636 721 Pnt
+5487 728 Pnt
+5898 730 Pnt
+5706 731 Pnt
+5607 844 Pnt
+5532 846 Pnt
+5594 847 Pnt
+3017 759 Pnt
+5541 733 Pnt
+5018 734 Pnt
+5908 735 Pnt
+5643 759 Pnt
+5403 760 Pnt
+5912 762 Pnt
+4741 765 Pnt
+5771 764 Pnt
+5086 749 Pnt
+5382 751 Pnt
+6034 752 Pnt
+5873 809 Pnt
+5557 754 Pnt
+5690 755 Pnt
+5923 804 Pnt
+5725 806 Pnt
+5660 807 Pnt
+5735 757 Pnt
+5641 810 Pnt
+4391 812 Pnt
+5604 738 Pnt
+5926 739 Pnt
+5618 849 Pnt
+5711 851 Pnt
+6007 852 Pnt
+4180 776 Pnt
+5090 777 Pnt
+4811 779 Pnt
+5905 780 Pnt
+5766 767 Pnt
+5559 768 Pnt
+3618 741 Pnt
+5478 770 Pnt
+5807 772 Pnt
+5009 741 Pnt
+5231 743 Pnt
+5374 744 Pnt
+4779 781 Pnt
+5719 784 Pnt
+4838 785 Pnt
+6054 815 Pnt
+5685 813 Pnt
+6085 773 Pnt
+5832 775 Pnt
+3983 817 Pnt
+5353 818 Pnt
+4892 818 Pnt
+5366 820 Pnt
+6146 746 Pnt
+5632 748 Pnt
+2541 854 Pnt
+5903 855 Pnt
+5653 856 Pnt
+5949 4205 Pnt
+5749 4206 Pnt
+5593 4042 Pnt
+3411 4208 Pnt
+5272 4043 Pnt
+5698 4046 Pnt
+5565 4046 Pnt
+6043 4196 Pnt
+5804 4197 Pnt
+5357 4199 Pnt
+5640 4209 Pnt
+5819 4210 Pnt
+5176 4201 Pnt
+5829 4202 Pnt
+5822 4212 Pnt
+4129 4203 Pnt
+5456 4048 Pnt
+5770 4050 Pnt
+5901 4066 Pnt
+5950 4068 Pnt
+5200 4218 Pnt
+4987 4220 Pnt
+5698 4214 Pnt
+5719 4215 Pnt
+5620 4221 Pnt
+5865 4217 Pnt
+5328 4069 Pnt
+4970 4071 Pnt
+3562 4073 Pnt
+5653 4072 Pnt
+5932 4080 Pnt
+6096 4075 Pnt
+5535 4076 Pnt
+5319 4079 Pnt
+4643 4078 Pnt
+5823 4083 Pnt
+5712 4084 Pnt
+5760 4085 Pnt
+5959 4775 Pnt
+5439 4776 Pnt
+6116 4223 Pnt
+5694 4761 Pnt
+5472 4762 Pnt
+5589 4758 Pnt
+5405 4759 Pnt
+5833 4757 Pnt
+5560 4778 Pnt
+5057 4779 Pnt
+5934 4780 Pnt
+3116 4225 Pnt
+5664 4225 Pnt
+5237 4227 Pnt
+5859 4782 Pnt
+5919 4783 Pnt
+5299 4785 Pnt
+5468 4764 Pnt
+5754 4766 Pnt
+6097 4767 Pnt
+5337 4097 Pnt
+5466 4099 Pnt
+5847 4100 Pnt
+5782 4088 Pnt
+5460 4089 Pnt
+6008 4093 Pnt
+3865 4090 Pnt
+5755 4091 Pnt
+3689 4094 Pnt
+5722 4096 Pnt
+5949 4104 Pnt
+5075 4105 Pnt
+5980 4102 Pnt
+4973 4787 Pnt
+5588 4788 Pnt
+2820 4769 Pnt
+5822 4770 Pnt
+5472 4771 Pnt
+5079 4773 Pnt
+3558 4789 Pnt
+5353 4228 Pnt
+5972 4230 Pnt
+5802 4231 Pnt
+5090 858 Pnt
+5964 860 Pnt
+5428 861 Pnt
+5166 4108 Pnt
+5994 4109 Pnt
+5295 4106 Pnt
+4219 872 Pnt
+5541 4112 Pnt
+3891 4114 Pnt
+5570 873 Pnt
+4356 4111 Pnt
+4541 874 Pnt
+5845 867 Pnt
+5777 869 Pnt
+5057 870 Pnt
+5258 863 Pnt
+5445 864 Pnt
+6047 865 Pnt
+5559 1092 Pnt
+5575 1094 Pnt
+5797 1095 Pnt
+6082 876 Pnt
+5508 877 Pnt
+5672 885 Pnt
+5826 886 Pnt
+4618 878 Pnt
+5803 889 Pnt
+4140 889 Pnt
+4856 890 Pnt
+5627 892 Pnt
+6110 4791 Pnt
+5592 4792 Pnt
+5661 880 Pnt
+5987 881 Pnt
+4680 4794 Pnt
+5718 884 Pnt
+5205 1079 Pnt
+3971 1080 Pnt
+6119 1074 Pnt
+4717 1077 Pnt
+5635 1076 Pnt
+5394 4795 Pnt
+5924 4796 Pnt
+5754 4799 Pnt
+5987 1082 Pnt
+5273 1083 Pnt
+3359 1097 Pnt
+6012 1098 Pnt
+5729 1100 Pnt
+4440 1101 Pnt
+5052 1103 Pnt
+5646 1103 Pnt
+4539 906 Pnt
+5756 905 Pnt
+5701 907 Pnt
+5982 903 Pnt
+4315 912 Pnt
+5101 913 Pnt
+4871 914 Pnt
+5794 915 Pnt
+5971 894 Pnt
+3818 895 Pnt
+5793 897 Pnt
+5504 898 Pnt
+4679 1086 Pnt
+5620 1085 Pnt
+5849 1087 Pnt
+4877 909 Pnt
+6104 918 Pnt
+5829 919 Pnt
+5918 910 Pnt
+5580 899 Pnt
+5928 901 Pnt
+5430 921 Pnt
+5332 922 Pnt
+5865 923 Pnt
+4717 926 Pnt
+5829 926 Pnt
+5782 928 Pnt
+5924 1089 Pnt
+5884 1090 Pnt
+5699 1106 Pnt
+5667 1107 Pnt
+5852 1108 Pnt
+5828 4234 Pnt
+4886 4235 Pnt
+5767 4236 Pnt
+6123 1047 Pnt
+5701 1049 Pnt
+5169 1050 Pnt
+4474 948 Pnt
+4260 948 Pnt
+5022 950 Pnt
+5899 952 Pnt
+5356 1039 Pnt
+5814 1040 Pnt
+5061 1121 Pnt
+5855 1123 Pnt
+5602 953 Pnt
+5034 1042 Pnt
+4603 1120 Pnt
+5936 955 Pnt
+4945 957 Pnt
+3025 930 Pnt
+5422 931 Pnt
+5721 932 Pnt
+5877 934 Pnt
+5700 936 Pnt
+5514 937 Pnt
+5939 939 Pnt
+5402 940 Pnt
+5082 941 Pnt
+5677 943 Pnt
+6064 1116 Pnt
+5993 1110 Pnt
+5622 1112 Pnt
+6144 944 Pnt
+5491 947 Pnt
+5407 963 Pnt
+5511 964 Pnt
+5822 965 Pnt
+5595 957 Pnt
+5718 960 Pnt
+5989 961 Pnt
+4497 1113 Pnt
+5405 1114 Pnt
+4055 1118 Pnt
+5771 1119 Pnt
+5936 1124 Pnt
+5970 1127 Pnt
+3615 1043 Pnt
+5186 1044 Pnt
+5670 1045 Pnt
+5485 1052 Pnt
+5876 1053 Pnt
+5303 1055 Pnt
+5872 1011 Pnt
+5718 1013 Pnt
+5683 1015 Pnt
+2686 967 Pnt
+5817 1002 Pnt
+4303 1004 Pnt
+6084 968 Pnt
+5632 970 Pnt
+5884 1006 Pnt
+5290 971 Pnt
+5182 973 Pnt
+5662 974 Pnt
+3619 1008 Pnt
+5770 1007 Pnt
+5884 1010 Pnt
+5626 977 Pnt
+5816 979 Pnt
+5794 1016 Pnt
+5773 1018 Pnt
+5663 976 Pnt
+4692 1019 Pnt
+5859 982 Pnt
+5864 981 Pnt
+5719 1056 Pnt
+5968 1058 Pnt
+5750 1060 Pnt
+2833 1061 Pnt
+5447 1061 Pnt
+5674 1064 Pnt
+3348 984 Pnt
+5700 984 Pnt
+5868 986 Pnt
+4339 987 Pnt
+5407 1128 Pnt
+5419 1129 Pnt
+5264 1131 Pnt
+5856 1132 Pnt
+5405 1020 Pnt
+5492 1022 Pnt
+6041 1024 Pnt
+4989 1134 Pnt
+5644 1136 Pnt
+5944 989 Pnt
+5084 990 Pnt
+2968 1025 Pnt
+5757 1026 Pnt
+5154 992 Pnt
+5472 1028 Pnt
+5523 1029 Pnt
+6044 1031 Pnt
+5793 1032 Pnt
+2677 1138 Pnt
+5948 1137 Pnt
+6015 1140 Pnt
+5749 1141 Pnt
+5671 994 Pnt
+6048 995 Pnt
+5759 1065 Pnt
+5128 1066 Pnt
+5608 998 Pnt
+5260 1000 Pnt
+4841 1002 Pnt
+5973 997 Pnt
+5905 1069 Pnt
+4978 1035 Pnt
+5446 1034 Pnt
+5221 1070 Pnt
+5983 1037 Pnt
+5459 1071 Pnt
+5821 1073 Pnt
+5559 1143 Pnt
+5714 1145 Pnt
+5659 1145 Pnt
+5658 4114 Pnt
+6068 4117 Pnt
+5864 4118 Pnt
+5705 4800 Pnt
+5374 4804 Pnt
+3770 4806 Pnt
+5820 4801 Pnt
+5799 4803 Pnt
+5713 4807 Pnt
+5388 4121 Pnt
+5767 4122 Pnt
+5626 4120 Pnt
+5524 4238 Pnt
+5944 4239 Pnt
+5043 4125 Pnt
+5710 4125 Pnt
+5636 4127 Pnt
+5975 4138 Pnt
+5548 4139 Pnt
+5687 4135 Pnt
+5396 4136 Pnt
+5664 1152 Pnt
+5061 4141 Pnt
+5927 4133 Pnt
+2855 1155 Pnt
+5499 4129 Pnt
+2674 4131 Pnt
+5905 4131 Pnt
+5477 1148 Pnt
+5135 4241 Pnt
+5289 4242 Pnt
+5258 1148 Pnt
+3058 4244 Pnt
+5732 4244 Pnt
+5804 1150 Pnt
+5978 1153 Pnt
+5674 4151 Pnt
+5421 4152 Pnt
+6074 4154 Pnt
+5810 1183 Pnt
+5550 1185 Pnt
+5757 1186 Pnt
+6028 1219 Pnt
+5782 1220 Pnt
+5448 1328 Pnt
+5539 1222 Pnt
+5608 4146 Pnt
+5573 4147 Pnt
+5819 1256 Pnt
+5109 1258 Pnt
+5653 1259 Pnt
+5586 1261 Pnt
+5661 1224 Pnt
+5698 1225 Pnt
+5802 1262 Pnt
+4398 1227 Pnt
+5605 1156 Pnt
+6009 1187 Pnt
+5880 1190 Pnt
+3742 1191 Pnt
+5502 1158 Pnt
+5221 1159 Pnt
+5482 1264 Pnt
+5651 1265 Pnt
+5957 1267 Pnt
+5268 1194 Pnt
+5916 1195 Pnt
+5811 1228 Pnt
+5975 1229 Pnt
+5171 1192 Pnt
+4406 1196 Pnt
+5747 1198 Pnt
+5158 1199 Pnt
+3356 1232 Pnt
+5351 1232 Pnt
+5496 1233 Pnt
+5620 1235 Pnt
+2471 1268 Pnt
+6105 1161 Pnt
+5552 1162 Pnt
+5104 1164 Pnt
+6031 1269 Pnt
+5692 1271 Pnt
+5159 1272 Pnt
+5752 1274 Pnt
+5434 1275 Pnt
+5980 1203 Pnt
+6003 1204 Pnt
+5654 1201 Pnt
+5725 1237 Pnt
+5747 1238 Pnt
+6036 1240 Pnt
+5404 1165 Pnt
+6083 1166 Pnt
+5584 1206 Pnt
+4873 1207 Pnt
+5745 1208 Pnt
+5688 1169 Pnt
+5694 1170 Pnt
+5465 1171 Pnt
+5416 1277 Pnt
+5519 1278 Pnt
+5977 1280 Pnt
+5315 1241 Pnt
+5099 1243 Pnt
+5551 1244 Pnt
+4201 1210 Pnt
+5966 1211 Pnt
+5871 1282 Pnt
+5817 1283 Pnt
+5105 1213 Pnt
+3896 1285 Pnt
+5109 1286 Pnt
+3423 1174 Pnt
+6123 1246 Pnt
+5449 1174 Pnt
+5256 1175 Pnt
+4904 1248 Pnt
+5327 1249 Pnt
+6024 1177 Pnt
+3598 1251 Pnt
+6005 1253 Pnt
+5279 1251 Pnt
+5743 1254 Pnt
+4479 1288 Pnt
+5769 1287 Pnt
+4650 1180 Pnt
+5691 1179 Pnt
+4772 1215 Pnt
+5681 1182 Pnt
+4739 1215 Pnt
+5893 1217 Pnt
+5564 4142 Pnt
+6103 4143 Pnt
+3765 4149 Pnt
+4692 4149 Pnt
+5384 4156 Pnt
+5039 4157 Pnt
+5671 4159 Pnt
+5196 1329 Pnt
+5687 1330 Pnt
+5386 1336 Pnt
+5116 1337 Pnt
+5835 1334 Pnt
+6104 1332 Pnt
+5961 1338 Pnt
+4938 1340 Pnt
+5813 1341 Pnt
+5518 1343 Pnt
+5270 1363 Pnt
+5353 1365 Pnt
+5906 4820 Pnt
+5011 4821 Pnt
+5361 4822 Pnt
+5816 1367 Pnt
+5970 1417 Pnt
+4165 1419 Pnt
+5889 1420 Pnt
+3693 1309 Pnt
+5922 1309 Pnt
+3143 1345 Pnt
+5610 1314 Pnt
+5842 1311 Pnt
+5720 1312 Pnt
+5403 1345 Pnt
+5767 1346 Pnt
+5840 1316 Pnt
+5931 1317 Pnt
+5671 1408 Pnt
+6002 1409 Pnt
+6004 1412 Pnt
+6016 1349 Pnt
+6067 1291 Pnt
+5279 1292 Pnt
+5364 1351 Pnt
+5744 1353 Pnt
+5707 1350 Pnt
+4860 1293 Pnt
+5681 1295 Pnt
+5610 1300 Pnt
+5618 1301 Pnt
+4482 1304 Pnt
+5630 1303 Pnt
+6058 1296 Pnt
+5832 1298 Pnt
+5824 1320 Pnt
+4381 1320 Pnt
+5619 1322 Pnt
+4636 1305 Pnt
+5788 1307 Pnt
+5180 1324 Pnt
+3642 1326 Pnt
+5960 1325 Pnt
+5578 1354 Pnt
+5122 1356 Pnt
+5723 1358 Pnt
+6101 1359 Pnt
+3098 1362 Pnt
+5689 1362 Pnt
+5910 1399 Pnt
+5847 1401 Pnt
+4380 1402 Pnt
+5602 1413 Pnt
+4888 1414 Pnt
+4985 1416 Pnt
+5734 1404 Pnt
+5179 1405 Pnt
+5410 1407 Pnt
+5954 1370 Pnt
+4988 1371 Pnt
+5475 1368 Pnt
+4083 1422 Pnt
+5420 1422 Pnt
+5897 1425 Pnt
+5790 1391 Pnt
+5745 1392 Pnt
+5994 4809 Pnt
+5445 4168 Pnt
+3099 1381 Pnt
+5687 1393 Pnt
+6078 1383 Pnt
+5543 1384 Pnt
+5772 1374 Pnt
+6076 1375 Pnt
+5544 1372 Pnt
+5943 1426 Pnt
+5824 1428 Pnt
+5539 1429 Pnt
+5660 1430 Pnt
+5108 1433 Pnt
+5559 1433 Pnt
+5403 1378 Pnt
+5237 1379 Pnt
+5598 1380 Pnt
+5439 1386 Pnt
+4860 1387 Pnt
+5841 1388 Pnt
+5768 1395 Pnt
+3145 1398 Pnt
+5837 1396 Pnt
+5582 4170 Pnt
+4706 4173 Pnt
+5746 4172 Pnt
+3854 4810 Pnt
+5757 4175 Pnt
+5559 4176 Pnt
+2862 4167 Pnt
+5855 4165 Pnt
+6025 4160 Pnt
+5526 4162 Pnt
+5626 4163 Pnt
+5958 4167 Pnt
+5774 4812 Pnt
+5305 4813 Pnt
+5456 4814 Pnt
+4984 4824 Pnt
+5953 4825 Pnt
+4414 4827 Pnt
+5871 4816 Pnt
+6014 4817 Pnt
+6128 4246 Pnt
+5734 4248 Pnt
+5308 4250 Pnt
+5391 4251 Pnt
+5793 4252 Pnt
+5537 4828 Pnt
+3999 4830 Pnt
+5722 4830 Pnt
+6065 4833 Pnt
+5871 4834 Pnt
+5593 4836 Pnt
+5439 4254 Pnt
+5663 4255 Pnt
+5881 4257 Pnt
+5456 4837 Pnt
+5778 4838 Pnt
+3793 4864 Pnt
+4680 4865 Pnt
+5818 3384 Pnt
+5731 4867 Pnt
+5938 3386 Pnt
+5075 3311 Pnt
+5412 3313 Pnt
+5983 3388 Pnt
+5143 3389 Pnt
+6076 3314 Pnt
+5230 3390 Pnt
+5303 3392 Pnt
+5721 4259 Pnt
+5723 4260 Pnt
+5583 3411 Pnt
+5324 3316 Pnt
+5657 3317 Pnt
+5656 3319 Pnt
+4379 3395 Pnt
+5527 3396 Pnt
+6035 3393 Pnt
+3794 3398 Pnt
+5583 3398 Pnt
+6063 3401 Pnt
+5560 3413 Pnt
+5931 3415 Pnt
+4548 3249 Pnt
+5669 3404 Pnt
+5316 3406 Pnt
+5749 3406 Pnt
+5849 3402 Pnt
+2553 3415 Pnt
+5964 3417 Pnt
+5698 3419 Pnt
+5244 3409 Pnt
+5688 3410 Pnt
+2773 3321 Pnt
+5778 3321 Pnt
+5601 3323 Pnt
+5926 3325 Pnt
+5616 3327 Pnt
+5118 3327 Pnt
+5315 3420 Pnt
+5140 3425 Pnt
+5936 3422 Pnt
+5533 3423 Pnt
+5558 3426 Pnt
+6082 3427 Pnt
+5642 3250 Pnt
+5481 3251 Pnt
+5627 3242 Pnt
+5757 3243 Pnt
+5425 3339 Pnt
+5621 3240 Pnt
+5061 3341 Pnt
+5876 3343 Pnt
+5174 3344 Pnt
+5663 3346 Pnt
+5060 3347 Pnt
+5778 3334 Pnt
+3772 3433 Pnt
+6083 3335 Pnt
+5700 3330 Pnt
+5644 3330 Pnt
+5650 3431 Pnt
+5699 3430 Pnt
+3058 3338 Pnt
+5863 3338 Pnt
+5459 3332 Pnt
+4751 3433 Pnt
+5638 3435 Pnt
+5242 3436 Pnt
+2906 3244 Pnt
+6003 3246 Pnt
+5798 3247 Pnt
+5491 3253 Pnt
+5707 3255 Pnt
+6013 3256 Pnt
+5946 3258 Pnt
+5494 3259 Pnt
+4410 3261 Pnt
+5250 3189 Pnt
+4698 3187 Pnt
+5844 3188 Pnt
+5608 3168 Pnt
+5088 3170 Pnt
+3560 3190 Pnt
+5532 3192 Pnt
+5836 3193 Pnt
+5934 3350 Pnt
+5974 3352 Pnt
+5374 3354 Pnt
+5836 3348 Pnt
+4956 3355 Pnt
+5698 3356 Pnt
+3824 3172 Pnt
+5083 3262 Pnt
+5971 3264 Pnt
+5901 3171 Pnt
+4155 3265 Pnt
+5603 3174 Pnt
+5420 3175 Pnt
+5894 3267 Pnt
+4746 3268 Pnt
+5232 3269 Pnt
+6041 3195 Pnt
+5681 3197 Pnt
+5382 3198 Pnt
+3629 3357 Pnt
+6075 3359 Pnt
+5460 3361 Pnt
+5238 3182 Pnt
+5039 3183 Pnt
+5993 3184 Pnt
+5744 3177 Pnt
+6072 3179 Pnt
+5835 3180 Pnt
+5228 3363 Pnt
+5932 3364 Pnt
+5573 3200 Pnt
+4623 3362 Pnt
+5692 3201 Pnt
+5027 3203 Pnt
+5915 3271 Pnt
+6002 3272 Pnt
+5808 3274 Pnt
+5792 3213 Pnt
+5565 3214 Pnt
+5901 3216 Pnt
+5739 3204 Pnt
+6058 3206 Pnt
+2677 3208 Pnt
+5790 3208 Pnt
+5513 3209 Pnt
+5012 3217 Pnt
+5592 3219 Pnt
+5527 3211 Pnt
+5741 3221 Pnt
+6084 3438 Pnt
+4971 3441 Pnt
+5381 3440 Pnt
+5412 3276 Pnt
+5633 3277 Pnt
+4650 3279 Pnt
+5686 3443 Pnt
+6044 3444 Pnt
+5604 3446 Pnt
+4823 3296 Pnt
+5517 3296 Pnt
+5766 3293 Pnt
+5800 3280 Pnt
+5092 3281 Pnt
+5532 3283 Pnt
+3179 3285 Pnt
+5955 3285 Pnt
+5972 3287 Pnt
+5739 3289 Pnt
+5567 3290 Pnt
+5861 3292 Pnt
+6089 3222 Pnt
+5886 3367 Pnt
+5726 3368 Pnt
+5699 3369 Pnt
+5248 3224 Pnt
+4683 3225 Pnt
+5240 3227 Pnt
+3960 3227 Pnt
+5371 3300 Pnt
+5760 3372 Pnt
+5535 3373 Pnt
+5930 3298 Pnt
+5822 3301 Pnt
+6095 3229 Pnt
+3976 3374 Pnt
+5613 3447 Pnt
+5806 3449 Pnt
+3112 3451 Pnt
+5448 3233 Pnt
+4965 3234 Pnt
+5785 3375 Pnt
+5586 3231 Pnt
+3561 3379 Pnt
+6012 3377 Pnt
+3194 3302 Pnt
+5378 3304 Pnt
+5922 3235 Pnt
+5765 3237 Pnt
+5784 3238 Pnt
+5497 3305 Pnt
+5622 3306 Pnt
+6131 3309 Pnt
+5366 3381 Pnt
+5653 3380 Pnt
+5625 3310 Pnt
+5488 3383 Pnt
+5914 3451 Pnt
+5329 3453 Pnt
+5642 3455 Pnt
+2795 4261 Pnt
+5767 4263 Pnt
+5783 4264 Pnt
+4881 4265 Pnt
+4800 4841 Pnt
+5765 4841 Pnt
+5553 4868 Pnt
+5691 4843 Pnt
+6057 4870 Pnt
+5374 4872 Pnt
+5238 3475 Pnt
+3307 3492 Pnt
+5284 3477 Pnt
+5897 3478 Pnt
+5593 3493 Pnt
+5815 3494 Pnt
+5253 3511 Pnt
+5325 3512 Pnt
+6069 3480 Pnt
+5822 3481 Pnt
+5823 3456 Pnt
+4419 3457 Pnt
+5877 3496 Pnt
+5690 3498 Pnt
+5789 3459 Pnt
+5608 3460 Pnt
+5640 3462 Pnt
+5637 3499 Pnt
+5890 3464 Pnt
+5937 3514 Pnt
+5746 3515 Pnt
+5872 3518 Pnt
+5342 3483 Pnt
+5175 3485 Pnt
+5882 3486 Pnt
+5996 3465 Pnt
+3956 3468 Pnt
+5844 3501 Pnt
+5318 3502 Pnt
+5749 3467 Pnt
+4993 3504 Pnt
+5173 3525 Pnt
+5664 3505 Pnt
+5725 3469 Pnt
+4548 3471 Pnt
+5293 3526 Pnt
+6123 3507 Pnt
+3076 3509 Pnt
+4892 3519 Pnt
+5722 3520 Pnt
+4615 3474 Pnt
+5610 3522 Pnt
+5892 3473 Pnt
+5985 3523 Pnt
+5661 3509 Pnt
+4291 3488 Pnt
+5926 3489 Pnt
+5702 3490 Pnt
+2849 4847 Pnt
+5416 4845 Pnt
+5868 4846 Pnt
+5883 4849 Pnt
+5980 4268 Pnt
+5277 4269 Pnt
+5232 4270 Pnt
+5739 4272 Pnt
+5675 4850 Pnt
+5484 4852 Pnt
+6005 4854 Pnt
+5123 4872 Pnt
+5648 4875 Pnt
+5998 4876 Pnt
+6119 4273 Pnt
+5810 4275 Pnt
+5829 3565 Pnt
+4646 3566 Pnt
+5898 3568 Pnt
+5556 4855 Pnt
+4993 4857 Pnt
+5561 4858 Pnt
+3008 3528 Pnt
+5702 3528 Pnt
+5454 4878 Pnt
+5281 3535 Pnt
+5812 3536 Pnt
+5316 3534 Pnt
+6126 3531 Pnt
+5707 3532 Pnt
+5669 3539 Pnt
+5831 3541 Pnt
+5444 3583 Pnt
+5745 3543 Pnt
+5548 3538 Pnt
+2832 3545 Pnt
+5765 3544 Pnt
+3515 3586 Pnt
+5807 3589 Pnt
+5588 3590 Pnt
+5319 3585 Pnt
+5941 3586 Pnt
+4327 3570 Pnt
+5594 3570 Pnt
+5904 3572 Pnt
+5397 4277 Pnt
+5133 4278 Pnt
+3940 4279 Pnt
+5831 4281 Pnt
+5815 3547 Pnt
+5813 3549 Pnt
+4714 3550 Pnt
+5730 3556 Pnt
+6101 3557 Pnt
+5656 3591 Pnt
+6010 3593 Pnt
+5816 3595 Pnt
+5941 3574 Pnt
+5671 3576 Pnt
+5626 3577 Pnt
+5822 3578 Pnt
+4025 3581 Pnt
+5895 3581 Pnt
+5080 3597 Pnt
+5103 3597 Pnt
+5268 3553 Pnt
+5942 3552 Pnt
+5875 3559 Pnt
+6004 3599 Pnt
+5453 3561 Pnt
+5259 3554 Pnt
+5053 3562 Pnt
+4282 3564 Pnt
+4922 4282 Pnt
+5881 4284 Pnt
+6118 4859 Pnt
+5489 4862 Pnt
+5492 4863 Pnt
+5641 4879 Pnt
+5897 4880 Pnt
+5469 3645 Pnt
+5547 3647 Pnt
+4935 3648 Pnt
+5934 3649 Pnt
+6113 3636 Pnt
+3525 3639 Pnt
+5619 3639 Pnt
+5203 1435 Pnt
+5587 1437 Pnt
+4768 3642 Pnt
+5250 3641 Pnt
+5852 3652 Pnt
+5877 3653 Pnt
+6026 3644 Pnt
+2677 4882 Pnt
+5990 4883 Pnt
+5530 4884 Pnt
+2779 1439 Pnt
+6029 1438 Pnt
+4954 3601 Pnt
+3730 4297 Pnt
+5938 4297 Pnt
+5525 4299 Pnt
+5767 3602 Pnt
+4236 3604 Pnt
+5735 3619 Pnt
+5931 3620 Pnt
+2578 3622 Pnt
+4560 3605 Pnt
+5516 3606 Pnt
+5803 3608 Pnt
+4563 3663 Pnt
+5394 3665 Pnt
+5840 3623 Pnt
+5628 3624 Pnt
+5775 3666 Pnt
+5722 3626 Pnt
+4423 4286 Pnt
+5630 4286 Pnt
+5891 4288 Pnt
+5926 4289 Pnt
+3133 3658 Pnt
+5384 3656 Pnt
+5691 3657 Pnt
+5463 3655 Pnt
+5687 3628 Pnt
+5424 3629 Pnt
+5824 3631 Pnt
+5664 3611 Pnt
+5224 3613 Pnt
+6107 3610 Pnt
+5247 3632 Pnt
+5513 3633 Pnt
+5773 3635 Pnt
+5411 3614 Pnt
+5928 3615 Pnt
+5074 3617 Pnt
+6078 3660 Pnt
+5700 3662 Pnt
+5671 3668 Pnt
+5701 3669 Pnt
+5907 3671 Pnt
+5178 4300 Pnt
+3874 4302 Pnt
+5882 4302 Pnt
+5633 4291 Pnt
+5657 4293 Pnt
+5859 4294 Pnt
+5522 4886 Pnt
+5019 4888 Pnt
+5636 4888 Pnt
+5915 1441 Pnt
+5647 1442 Pnt
+3382 3699 Pnt
+5857 3700 Pnt
+5904 3673 Pnt
+5474 3674 Pnt
+6042 3702 Pnt
+5821 3703 Pnt
+3998 3675 Pnt
+5227 3690 Pnt
+5465 3691 Pnt
+4918 3694 Pnt
+5884 3695 Pnt
+5508 3677 Pnt
+6018 3678 Pnt
+3917 3680 Pnt
+5825 3681 Pnt
+4998 3682 Pnt
+5331 3684 Pnt
+5578 3705 Pnt
+5893 3686 Pnt
+6011 3687 Pnt
+4763 3696 Pnt
+5565 3698 Pnt
+5894 3689 Pnt
+5660 3707 Pnt
+5747 3708 Pnt
+5701 1651 Pnt
+5612 1653 Pnt
+5957 1655 Pnt
+5511 1444 Pnt
+5937 1446 Pnt
+5747 1447 Pnt
+5463 1449 Pnt
+4998 1450 Pnt
+5943 1451 Pnt
+5348 1656 Pnt
+5059 1657 Pnt
+5649 1659 Pnt
+5717 4891 Pnt
+5509 4892 Pnt
+5714 4894 Pnt
+5465 1580 Pnt
+6075 1581 Pnt
+5781 1583 Pnt
+5480 1873 Pnt
+5370 1874 Pnt
+6121 1877 Pnt
+5080 1880 Pnt
+5417 1881 Pnt
+5587 1878 Pnt
+5592 1868 Pnt
+5937 1869 Pnt
+2909 1871 Pnt
+5535 1872 Pnt
+5503 1454 Pnt
+5876 1455 Pnt
+3696 1457 Pnt
+4869 1457 Pnt
+5972 1597 Pnt
+5649 1599 Pnt
+5683 1601 Pnt
+6088 1882 Pnt
+5586 1885 Pnt
+5666 1886 Pnt
+5279 1459 Pnt
+5526 1460 Pnt
+3669 1605 Pnt
+5857 1605 Pnt
+5116 1606 Pnt
+5728 1584 Pnt
+5084 1586 Pnt
+5881 1602 Pnt
+3885 1588 Pnt
+5561 1608 Pnt
+3101 1889 Pnt
+5603 1890 Pnt
+5527 1887 Pnt
+4088 1610 Pnt
+5933 1610 Pnt
+5410 1891 Pnt
+5998 1893 Pnt
+5675 1895 Pnt
+5486 1589 Pnt
+4949 1589 Pnt
+6146 1462 Pnt
+5654 1463 Pnt
+6079 1592 Pnt
+5101 1465 Pnt
+5507 1901 Pnt
+5769 1902 Pnt
+6041 1903 Pnt
+4798 1895 Pnt
+5692 1898 Pnt
+5766 1899 Pnt
+5401 1466 Pnt
+6021 1468 Pnt
+5442 1470 Pnt
+5781 1613 Pnt
+5459 1614 Pnt
+5533 1593 Pnt
+4698 1594 Pnt
+5670 1596 Pnt
+5880 1906 Pnt
+3463 1906 Pnt
+5293 1907 Pnt
+6144 1660 Pnt
+5874 1911 Pnt
+4708 1912 Pnt
+4175 1663 Pnt
+5175 1909 Pnt
+5391 1663 Pnt
+4561 1664 Pnt
+5690 1471 Pnt
+5791 1472 Pnt
+2840 1475 Pnt
+5709 1475 Pnt
+5116 1915 Pnt
+5728 1914 Pnt
+5476 1476 Pnt
+5870 1478 Pnt
+5717 1916 Pnt
+4903 1923 Pnt
+4927 1481 Pnt
+5737 1480 Pnt
+5466 1486 Pnt
+5790 1483 Pnt
+5495 1484 Pnt
+5811 1487 Pnt
+6102 1489 Pnt
+3963 1492 Pnt
+5790 1491 Pnt
+5182 1493 Pnt
+5973 1919 Pnt
+6000 1920 Pnt
+5507 1922 Pnt
+4711 1495 Pnt
+5913 1496 Pnt
+5025 1497 Pnt
+5742 1924 Pnt
+3951 1926 Pnt
+5610 1615 Pnt
+5940 1617 Pnt
+5999 1618 Pnt
+6086 1634 Pnt
+5822 1635 Pnt
+5436 1637 Pnt
+5694 1621 Pnt
+4490 1622 Pnt
+5726 1623 Pnt
+5246 1929 Pnt
+4668 1931 Pnt
+5377 1638 Pnt
+5830 1639 Pnt
+6008 1927 Pnt
+4516 1641 Pnt
+5690 1500 Pnt
+4839 1501 Pnt
+5795 1502 Pnt
+5862 1642 Pnt
+5828 1644 Pnt
+5764 1936 Pnt
+5585 1938 Pnt
+4958 1931 Pnt
+5913 1933 Pnt
+3109 1646 Pnt
+5451 1647 Pnt
+5988 1935 Pnt
+5700 1940 Pnt
+5707 1648 Pnt
+5824 1650 Pnt
+4616 1625 Pnt
+5916 1626 Pnt
+4564 1627 Pnt
+5029 1629 Pnt
+4974 1630 Pnt
+5853 1631 Pnt
+5966 1504 Pnt
+5959 1505 Pnt
+5060 1666 Pnt
+5942 1668 Pnt
+5685 1669 Pnt
+4432 1735 Pnt
+5821 1734 Pnt
+5477 1736 Pnt
+5901 1671 Pnt
+4949 1672 Pnt
+5657 1673 Pnt
+3774 1724 Pnt
+5885 1726 Pnt
+5864 1727 Pnt
+5829 1769 Pnt
+5005 1751 Pnt
+5995 1753 Pnt
+5663 1676 Pnt
+5176 1755 Pnt
+5713 1742 Pnt
+5450 1744 Pnt
+5594 1745 Pnt
+5794 1756 Pnt
+3542 1759 Pnt
+5084 1758 Pnt
+6060 1747 Pnt
+5815 1748 Pnt
+5367 1750 Pnt
+5677 1729 Pnt
+5716 1731 Pnt
+5845 1732 Pnt
+5389 1738 Pnt
+3190 1740 Pnt
+6005 1740 Pnt
+5952 1677 Pnt
+5503 1507 Pnt
+5292 1509 Pnt
+3591 1511 Pnt
+5754 1510 Pnt
+5201 1771 Pnt
+5731 1772 Pnt
+5337 1760 Pnt
+5737 1761 Pnt
+5129 1958 Pnt
+6103 1763 Pnt
+5489 1960 Pnt
+6101 1962 Pnt
+5700 1765 Pnt
+5231 1766 Pnt
+4658 1964 Pnt
+5423 1965 Pnt
+5518 1768 Pnt
+6005 1774 Pnt
+5474 1777 Pnt
+2753 1776 Pnt
+5765 1776 Pnt
+3642 1966 Pnt
+5395 1967 Pnt
+5370 1679 Pnt
+5520 1680 Pnt
+2616 1682 Pnt
+5845 1681 Pnt
+6032 1969 Pnt
+5790 1970 Pnt
+5619 1780 Pnt
+4244 1942 Pnt
+5748 1781 Pnt
+5814 1944 Pnt
+5653 1941 Pnt
+5305 1782 Pnt
+5912 1784 Pnt
+5155 1785 Pnt
+6093 1684 Pnt
+4677 1793 Pnt
+5529 1792 Pnt
+5229 1795 Pnt
+3905 1796 Pnt
+5568 1951 Pnt
+5494 1787 Pnt
+5804 1789 Pnt
+5754 1953 Pnt
+6116 1790 Pnt
+5996 1945 Pnt
+5822 1954 Pnt
+6026 1956 Pnt
+5267 1957 Pnt
+3416 1947 Pnt
+5452 1948 Pnt
+5438 1949 Pnt
+5769 1972 Pnt
+5172 1974 Pnt
+5693 1975 Pnt
+5677 1685 Pnt
+5260 1687 Pnt
+6037 1513 Pnt
+5542 1514 Pnt
+5502 1977 Pnt
+5752 1978 Pnt
+4934 1534 Pnt
+5334 1536 Pnt
+5503 1980 Pnt
+5808 1538 Pnt
+4522 1516 Pnt
+4906 1517 Pnt
+5892 1525 Pnt
+5849 1518 Pnt
+5612 1526 Pnt
+5869 1520 Pnt
+4278 1528 Pnt
+5661 1529 Pnt
+5710 1522 Pnt
+5723 1523 Pnt
+3805 1533 Pnt
+5633 1981 Pnt
+5956 1983 Pnt
+5576 1534 Pnt
+6058 1531 Pnt
+2455 1984 Pnt
+5900 1539 Pnt
+6023 1541 Pnt
+5318 1543 Pnt
+6016 1985 Pnt
+5703 1987 Pnt
+5193 1988 Pnt
+5826 1990 Pnt
+5477 1991 Pnt
+5322 1993 Pnt
+6028 1797 Pnt
+5566 1801 Pnt
+5405 1799 Pnt
+4767 1802 Pnt
+5882 1803 Pnt
+6042 1832 Pnt
+3998 1834 Pnt
+5829 1835 Pnt
+6018 1814 Pnt
+5764 1815 Pnt
+4425 1817 Pnt
+5676 1823 Pnt
+5912 1824 Pnt
+5882 1805 Pnt
+5854 1806 Pnt
+5600 1810 Pnt
+5790 1811 Pnt
+5985 1826 Pnt
+5567 1808 Pnt
+3175 1813 Pnt
+5322 1819 Pnt
+5567 1819 Pnt
+5590 1828 Pnt
+4455 1829 Pnt
+5630 1821 Pnt
+5324 1830 Pnt
+2963 1552 Pnt
+6045 1554 Pnt
+5790 1556 Pnt
+5586 1550 Pnt
+5768 1552 Pnt
+5660 1558 Pnt
+4828 1549 Pnt
+5359 1546 Pnt
+6012 1547 Pnt
+5460 1559 Pnt
+5255 1544 Pnt
+5654 1560 Pnt
+4691 1836 Pnt
+5095 1837 Pnt
+5882 1839 Pnt
+5966 1840 Pnt
+5440 1562 Pnt
+5542 1563 Pnt
+5662 1565 Pnt
+5367 1689 Pnt
+5631 1690 Pnt
+5847 1697 Pnt
+5835 1698 Pnt
+5581 1692 Pnt
+5608 1693 Pnt
+3237 1700 Pnt
+5531 1994 Pnt
+6019 1996 Pnt
+5649 1700 Pnt
+5827 1998 Pnt
+5868 1694 Pnt
+5772 1999 Pnt
+5134 1847 Pnt
+5921 1843 Pnt
+4457 1703 Pnt
+5989 1705 Pnt
+5844 1702 Pnt
+5398 1844 Pnt
+5800 1848 Pnt
+5498 1845 Pnt
+3845 2001 Pnt
+4978 2001 Pnt
+5676 1567 Pnt
+2536 1569 Pnt
+5991 1568 Pnt
+5157 1706 Pnt
+5119 1708 Pnt
+5694 1709 Pnt
+5922 1713 Pnt
+5573 1714 Pnt
+6008 1856 Pnt
+6074 1711 Pnt
+2806 1854 Pnt
+4984 1850 Pnt
+5622 1851 Pnt
+5959 1853 Pnt
+5753 1857 Pnt
+5548 1859 Pnt
+5869 1571 Pnt
+5643 1572 Pnt
+5176 1573 Pnt
+4729 2004 Pnt
+5703 2003 Pnt
+6080 2006 Pnt
+5328 1716 Pnt
+4619 1718 Pnt
+5752 1718 Pnt
+5770 1860 Pnt
+5704 1861 Pnt
+5223 1864 Pnt
+5381 1864 Pnt
+4424 1720 Pnt
+5875 1722 Pnt
+5790 1723 Pnt
+5851 1866 Pnt
+5330 2008 Pnt
+4881 2009 Pnt
+5690 2011 Pnt
+6061 2012 Pnt
+6007 1575 Pnt
+5482 1577 Pnt
+5184 1579 Pnt
+5761 2014 Pnt
+5602 2015 Pnt
+5720 3718 Pnt
+5599 3720 Pnt
+5496 3721 Pnt
+4962 4313 Pnt
+5129 4313 Pnt
+4860 3710 Pnt
+5649 3711 Pnt
+5812 3712 Pnt
+5472 3715 Pnt
+2814 3717 Pnt
+5882 3716 Pnt
+5686 2017 Pnt
+6084 3723 Pnt
+5574 3724 Pnt
+5032 3726 Pnt
+3901 2019 Pnt
+5765 2019 Pnt
+4931 2021 Pnt
+6008 4315 Pnt
+5886 2157 Pnt
+5630 2158 Pnt
+5824 2171 Pnt
+3825 2172 Pnt
+5549 2160 Pnt
+4741 2173 Pnt
+5004 2166 Pnt
+5971 2167 Pnt
+5831 2027 Pnt
+5969 2162 Pnt
+5779 2163 Pnt
+5371 2169 Pnt
+5362 2165 Pnt
+5748 2023 Pnt
+3915 2025 Pnt
+5905 2025 Pnt
+5689 2028 Pnt
+5608 2030 Pnt
+5568 4306 Pnt
+5755 4305 Pnt
+5717 3736 Pnt
+5545 3737 Pnt
+5718 4307 Pnt
+6026 3740 Pnt
+4985 2039 Pnt
+5915 2041 Pnt
+3948 2042 Pnt
+5319 2186 Pnt
+5383 2044 Pnt
+5701 2187 Pnt
+5863 2032 Pnt
+5960 2033 Pnt
+5355 2175 Pnt
+5641 2176 Pnt
+6140 2178 Pnt
+5844 2188 Pnt
+5767 2046 Pnt
+5412 2182 Pnt
+5806 2036 Pnt
+4231 2036 Pnt
+2707 2191 Pnt
+6000 2184 Pnt
+5211 2045 Pnt
+5666 2179 Pnt
+5130 2181 Pnt
+5764 2191 Pnt
+5539 2192 Pnt
+5666 2037 Pnt
+5239 2305 Pnt
+3559 2303 Pnt
+5536 2304 Pnt
+5129 2302 Pnt
+6069 2308 Pnt
+5543 2309 Pnt
+5480 3727 Pnt
+6116 3729 Pnt
+3474 2456 Pnt
+5958 2456 Pnt
+5662 2458 Pnt
+4181 2450 Pnt
+5855 2450 Pnt
+5747 2447 Pnt
+5887 2448 Pnt
+5546 2452 Pnt
+5256 2454 Pnt
+4793 2310 Pnt
+5431 2459 Pnt
+5670 2461 Pnt
+5671 2312 Pnt
+6070 2463 Pnt
+5950 2313 Pnt
+5456 2067 Pnt
+5784 2069 Pnt
+5504 2070 Pnt
+5112 2197 Pnt
+5703 2196 Pnt
+5823 2194 Pnt
+5807 2199 Pnt
+5422 2200 Pnt
+5829 2464 Pnt
+5295 2466 Pnt
+5028 2467 Pnt
+5998 2468 Pnt
+4950 2471 Pnt
+5805 2472 Pnt
+5468 2202 Pnt
+5807 2203 Pnt
+6113 2205 Pnt
+5584 2059 Pnt
+3172 2060 Pnt
+5473 2061 Pnt
+3530 2475 Pnt
+5792 2477 Pnt
+5447 2476 Pnt
+5159 2473 Pnt
+6075 2479 Pnt
+5692 2481 Pnt
+5145 2053 Pnt
+5946 2054 Pnt
+5789 2062 Pnt
+5741 2207 Pnt
+4708 2056 Pnt
+6099 2048 Pnt
+5853 2057 Pnt
+5838 2050 Pnt
+5356 2051 Pnt
+3785 2208 Pnt
+5234 2209 Pnt
+4671 2210 Pnt
+5975 2065 Pnt
+5697 2066 Pnt
+5064 2072 Pnt
+5714 2073 Pnt
+6115 2075 Pnt
+5652 2215 Pnt
+4857 2216 Pnt
+5215 2213 Pnt
+5945 2212 Pnt
+5850 2218 Pnt
+5108 2487 Pnt
+5738 2488 Pnt
+6035 2490 Pnt
+3077 2078 Pnt
+5910 2500 Pnt
+5303 2482 Pnt
+5546 2484 Pnt
+5768 2485 Pnt
+5085 2501 Pnt
+5539 2503 Pnt
+5670 2078 Pnt
+5265 2079 Pnt
+5778 2505 Pnt
+6106 2506 Pnt
+4666 2509 Pnt
+5401 2508 Pnt
+5237 2511 Pnt
+2699 2492 Pnt
+3906 2511 Pnt
+5779 2492 Pnt
+5497 2493 Pnt
+5937 2220 Pnt
+5938 2221 Pnt
+5475 2223 Pnt
+5761 2497 Pnt
+5450 2498 Pnt
+5569 2495 Pnt
+6065 2513 Pnt
+5507 2515 Pnt
+5507 2517 Pnt
+5329 2224 Pnt
+5740 2226 Pnt
+3397 2227 Pnt
+6059 2228 Pnt
+5325 2081 Pnt
+5854 2082 Pnt
+5587 2083 Pnt
+5582 2315 Pnt
+5697 2317 Pnt
+5928 2318 Pnt
+5559 2537 Pnt
+5594 2391 Pnt
+5910 2393 Pnt
+5690 2539 Pnt
+5351 2394 Pnt
+5820 2522 Pnt
+5589 2524 Pnt
+3317 2321 Pnt
+5617 2526 Pnt
+5897 2321 Pnt
+5488 2324 Pnt
+4380 2326 Pnt
+5882 2326 Pnt
+5282 2322 Pnt
+5609 2230 Pnt
+4864 2518 Pnt
+5906 2519 Pnt
+5829 2521 Pnt
+5763 2329 Pnt
+5410 2330 Pnt
+5650 2331 Pnt
+4491 2232 Pnt
+5115 2233 Pnt
+3024 2528 Pnt
+5625 2245 Pnt
+5776 2527 Pnt
+6053 2247 Pnt
+4175 2244 Pnt
+5809 2236 Pnt
+5701 2237 Pnt
+6014 2530 Pnt
+5829 2234 Pnt
+5787 2239 Pnt
+5903 2241 Pnt
+5575 2242 Pnt
+5945 2333 Pnt
+6008 2334 Pnt
+5510 2534 Pnt
+5514 2535 Pnt
+5786 2531 Pnt
+4469 2533 Pnt
+5618 2337 Pnt
+5966 2540 Pnt
+5969 2542 Pnt
+5547 2543 Pnt
+5988 2257 Pnt
+5282 2259 Pnt
+5325 2260 Pnt
+4456 2337 Pnt
+5739 2339 Pnt
+5081 2346 Pnt
+5902 2347 Pnt
+4361 2341 Pnt
+6060 2350 Pnt
+5943 2342 Pnt
+4810 2343 Pnt
+4956 2345 Pnt
+5769 2366 Pnt
+4330 2357 Pnt
+5783 2355 Pnt
+5809 2351 Pnt
+5456 2352 Pnt
+5417 2354 Pnt
+5886 2358 Pnt
+5711 2367 Pnt
+5702 2368 Pnt
+5967 2371 Pnt
+5283 2372 Pnt
+5868 2360 Pnt
+3189 2362 Pnt
+3763 2248 Pnt
+5695 2249 Pnt
+4970 2250 Pnt
+5504 2363 Pnt
+5693 2364 Pnt
+4426 2545 Pnt
+5218 2546 Pnt
+6011 2548 Pnt
+5318 2252 Pnt
+4035 2549 Pnt
+5869 2551 Pnt
+4736 2552 Pnt
+5152 2553 Pnt
+5843 2254 Pnt
+5947 2255 Pnt
+5252 2262 Pnt
+5968 2263 Pnt
+4757 2265 Pnt
+5520 2396 Pnt
+5861 2397 Pnt
+2590 2398 Pnt
+6094 2400 Pnt
+5052 2373 Pnt
+5609 2375 Pnt
+6137 2376 Pnt
+5014 2103 Pnt
+5836 2104 Pnt
+4023 2379 Pnt
+5378 2379 Pnt
+5722 2107 Pnt
+5713 2108 Pnt
+4648 2380 Pnt
+5731 2109 Pnt
+5124 2382 Pnt
+5769 2111 Pnt
+5935 2086 Pnt
+4946 2087 Pnt
+5608 2088 Pnt
+5732 2090 Pnt
+6052 2091 Pnt
+5708 2401 Pnt
+5252 2403 Pnt
+5980 2384 Pnt
+5751 2385 Pnt
+3010 2114 Pnt
+5887 2115 Pnt
+6102 2099 Pnt
+5821 2112 Pnt
+5614 2100 Pnt
+5311 2093 Pnt
+5263 2095 Pnt
+5384 2102 Pnt
+3026 2097 Pnt
+5636 2096 Pnt
+5858 2387 Pnt
+4967 2388 Pnt
+5508 2405 Pnt
+5618 2406 Pnt
+5708 2389 Pnt
+5846 2117 Pnt
+4454 2118 Pnt
+5823 2120 Pnt
+5487 2408 Pnt
+5601 2409 Pnt
+5809 2272 Pnt
+5622 2273 Pnt
+5593 2266 Pnt
+6051 2270 Pnt
+3074 2268 Pnt
+5805 2268 Pnt
+5532 2275 Pnt
+5692 2276 Pnt
+5902 2555 Pnt
+5988 2556 Pnt
+5311 2278 Pnt
+5518 2279 Pnt
+5712 2281 Pnt
+5626 2283 Pnt
+5585 2567 Pnt
+5962 2569 Pnt
+2973 2569 Pnt
+5221 2121 Pnt
+4940 2563 Pnt
+5867 2559 Pnt
+5399 2560 Pnt
+5771 2564 Pnt
+5569 2561 Pnt
+5018 2566 Pnt
+5349 2123 Pnt
+5694 2124 Pnt
+6042 2125 Pnt
+5971 2128 Pnt
+5559 2129 Pnt
+5994 2572 Pnt
+5750 2573 Pnt
+5551 2574 Pnt
+5540 2430 Pnt
+5402 2431 Pnt
+4929 2130 Pnt
+5861 2429 Pnt
+4815 2132 Pnt
+5920 2133 Pnt
+3149 2415 Pnt
+5801 2414 Pnt
+5918 2410 Pnt
+5822 2413 Pnt
+5588 2416 Pnt
+5808 2418 Pnt
+4232 2134 Pnt
+5710 2425 Pnt
+6092 2427 Pnt
+6024 2421 Pnt
+5210 2422 Pnt
+5902 2136 Pnt
+4623 2419 Pnt
+5097 2424 Pnt
+4157 2138 Pnt
+5490 2138 Pnt
+4258 2434 Pnt
+5735 2434 Pnt
+4660 2435 Pnt
+5819 2576 Pnt
+5739 2577 Pnt
+5089 2580 Pnt
+5383 2580 Pnt
+2577 2285 Pnt
+5564 2145 Pnt
+5723 2146 Pnt
+5769 2144 Pnt
+5627 2288 Pnt
+5277 2289 Pnt
+5827 2287 Pnt
+5858 2437 Pnt
+5907 2141 Pnt
+5966 2284 Pnt
+6041 2291 Pnt
+5950 2142 Pnt
+3940 2440 Pnt
+5798 2439 Pnt
+4703 2149 Pnt
+5730 2149 Pnt
+5271 2151 Pnt
+5120 2294 Pnt
+5479 2296 Pnt
+5894 2582 Pnt
+5498 2584 Pnt
+5520 2153 Pnt
+5524 2293 Pnt
+2972 2155 Pnt
+6011 2154 Pnt
+5885 2585 Pnt
+3018 2587 Pnt
+5458 2588 Pnt
+5478 2589 Pnt
+5702 2299 Pnt
+5676 2300 Pnt
+5879 2442 Pnt
+6096 2297 Pnt
+5848 2443 Pnt
+5646 2445 Pnt
+3170 3735 Pnt
+5024 3742 Pnt
+5478 3731 Pnt
+5588 3732 Pnt
+5264 3734 Pnt
+5520 3741 Pnt
+5653 3744 Pnt
+5823 4311 Pnt
+6020 4309 Pnt
+4672 4317 Pnt
+5797 4318 Pnt
+4486 4320 Pnt
+4508 4321 Pnt
+5889 4896 Pnt
+6002 4897 Pnt
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+714 4899 N
+714 280 L
+6233 0 V
+0 4619 V
+-6233 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
