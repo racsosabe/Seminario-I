@@ -2,10 +2,12 @@
 #set size (221.0/72.27)/5.0, (221.0/72.27)/3.0
 #plot "zeta3" with points pointtype 6 pointsize 0.5
 set terminal postscript eps color
-set output "zeta5mod.eps"
-set xrange [-2.5:1]
-set yrange [0:12.50]
-plot "toplotzeta5mod" with dots lw 4 title ""
+set output "zeta9.eps"
+set xrange [-8:2]
+set yrange [0:10000]
+set xlabel 'Re(s)'
+set ylabel 'Im(s)'
+plot "toplotzeta9" with dots lt 8 lw 4 title ""
 
 #plot "tognuplot" with dots lt 8 lw 3 title ""
 # LINE COLORS, STYLES

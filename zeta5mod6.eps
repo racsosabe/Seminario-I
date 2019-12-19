@@ -1,0 +1,3316 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: zeta5mod6.eps
+%%Creator: gnuplot 5.2 patchlevel 2
+%%CreationDate: Mon Dec 16 12:42:14 2019
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.1 (Oct 2015)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (zeta5mod6.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.2 patchlevel 2)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Mon Dec 16 12:42:14 2019)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
+1.000 UL
+LTb
+LCb setrgbcolor
+686 448 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 1051 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 1051 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 1654 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 1654 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 2257 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 2257 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 2860 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 2860 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 2)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 3464 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 3464 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 2.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 4067 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 4067 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 3)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 4670 M
+63 0 V
+6198 0 R
+-63 0 V
+stroke
+602 4670 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 3.5)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+686 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+686 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-2.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1580 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+1580 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-2)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2475 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+2475 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-1.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+3369 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+3369 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-1)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+4264 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+4264 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5158 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+5158 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+6053 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+6053 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.5)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+6947 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+686 4899 N
+686 448 L
+6261 0 V
+0 4451 V
+-6261 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+126 2673 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (Im\(s\))]
+] -46.7 MCshow
+grestore
+LTb
+LCb setrgbcolor
+3816 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Re\(s\))]
+] -46.7 MCshow
+LTb
+% Begin plot #1
+4.000 UL
+LTb
+0.58 0.00 0.83 C 917 4137 Pnt
+4958 1601 Pnt
+6178 464 Pnt
+6544 2852 Pnt
+5640 2721 Pnt
+3279 3087 Pnt
+6285 2909 Pnt
+6603 3526 Pnt
+2116 2739 Pnt
+6470 2942 Pnt
+5256 4810 Pnt
+5937 2737 Pnt
+6067 3357 Pnt
+5392 3246 Pnt
+6382 2835 Pnt
+5978 686 Pnt
+1750 1233 Pnt
+5495 2809 Pnt
+6538 2421 Pnt
+6039 885 Pnt
+6678 837 Pnt
+4031 2017 Pnt
+4846 753 Pnt
+6455 1047 Pnt
+2363 2899 Pnt
+5233 3620 Pnt
+6472 2927 Pnt
+5148 705 Pnt
+6143 1130 Pnt
+4340 1936 Pnt
+6010 3139 Pnt
+6704 3190 Pnt
+1180 3661 Pnt
+6656 496 Pnt
+4823 1532 Pnt
+4551 3076 Pnt
+3917 4024 Pnt
+6003 758 Pnt
+6466 3153 Pnt
+5230 2700 Pnt
+5077 1840 Pnt
+5799 3301 Pnt
+4682 564 Pnt
+5597 606 Pnt
+6494 868 Pnt
+2948 4700 Pnt
+4176 3452 Pnt
+5136 2166 Pnt
+5437 3380 Pnt
+6265 1194 Pnt
+5835 1320 Pnt
+4041 1847 Pnt
+1782 744 Pnt
+5814 2713 Pnt
+6684 2641 Pnt
+6507 1020 Pnt
+6532 1518 Pnt
+5274 936 Pnt
+1264 2802 Pnt
+6378 1668 Pnt
+5112 2869 Pnt
+6369 1950 Pnt
+4584 1992 Pnt
+3681 702 Pnt
+5694 1315 Pnt
+4407 1653 Pnt
+6501 1774 Pnt
+6615 1181 Pnt
+1227 1402 Pnt
+6417 4326 Pnt
+5397 4120 Pnt
+6277 1282 Pnt
+6414 4328 Pnt
+2936 3996 Pnt
+6078 1512 Pnt
+2595 3518 Pnt
+6054 3603 Pnt
+5505 3517 Pnt
+5759 1852 Pnt
+4789 2363 Pnt
+4014 2955 Pnt
+6114 4184 Pnt
+5695 2149 Pnt
+6482 4292 Pnt
+5737 3930 Pnt
+5973 3744 Pnt
+2516 1354 Pnt
+5253 4866 Pnt
+4847 2030 Pnt
+1172 2372 Pnt
+5910 4273 Pnt
+1882 4084 Pnt
+5782 2652 Pnt
+6719 1947 Pnt
+5371 4418 Pnt
+6672 3975 Pnt
+5908 2035 Pnt
+3418 4429 Pnt
+4065 1157 Pnt
+4975 3143 Pnt
+6567 2302 Pnt
+5672 1983 Pnt
+6655 3654 Pnt
+4883 3531 Pnt
+6603 3289 Pnt
+6171 3443 Pnt
+4791 645 Pnt
+6214 3626 Pnt
+2466 913 Pnt
+5022 1538 Pnt
+5182 2777 Pnt
+2542 3753 Pnt
+4735 1723 Pnt
+5440 4873 Pnt
+6427 4330 Pnt
+4634 3198 Pnt
+6672 1180 Pnt
+5047 642 Pnt
+5489 1643 Pnt
+6096 1724 Pnt
+3894 4392 Pnt
+3884 3551 Pnt
+6747 1527 Pnt
+6519 1829 Pnt
+5730 1804 Pnt
+4348 3967 Pnt
+6399 1679 Pnt
+3707 3051 Pnt
+3162 2867 Pnt
+5480 4073 Pnt
+5618 1306 Pnt
+6731 3946 Pnt
+6021 4548 Pnt
+6693 4642 Pnt
+2550 4877 Pnt
+5265 527 Pnt
+4120 599 Pnt
+4734 4642 Pnt
+5567 3732 Pnt
+4800 1590 Pnt
+1630 1936 Pnt
+5445 3575 Pnt
+5710 3957 Pnt
+5701 4286 Pnt
+6651 4258 Pnt
+6084 1756 Pnt
+6637 2291 Pnt
+5956 2301 Pnt
+5199 4682 Pnt
+3614 3177 Pnt
+6471 2438 Pnt
+2696 529 Pnt
+2088 3349 Pnt
+6336 3793 Pnt
+6292 3569 Pnt
+4815 1424 Pnt
+5580 3357 Pnt
+5007 4064 Pnt
+5409 2241 Pnt
+5224 1464 Pnt
+6442 3639 Pnt
+6298 3564 Pnt
+3232 4288 Pnt
+6216 2255 Pnt
+6005 1989 Pnt
+6478 2199 Pnt
+6336 4602 Pnt
+5161 3463 Pnt
+5281 4735 Pnt
+6472 536 Pnt
+835 4555 Pnt
+6471 4380 Pnt
+5750 703 Pnt
+4504 3496 Pnt
+5573 4623 Pnt
+5188 1653 Pnt
+5526 661 Pnt
+3613 2270 Pnt
+3849 3961 Pnt
+6246 4797 Pnt
+6092 2665 Pnt
+4870 1146 Pnt
+2195 2659 Pnt
+5511 1869 Pnt
+6740 1045 Pnt
+5552 996 Pnt
+5736 2717 Pnt
+5714 3080 Pnt
+6747 3397 Pnt
+5706 3364 Pnt
+5892 784 Pnt
+6470 1050 Pnt
+6361 3439 Pnt
+5174 3069 Pnt
+3136 2896 Pnt
+4833 4440 Pnt
+6354 3446 Pnt
+5367 3599 Pnt
+6067 1068 Pnt
+2591 2295 Pnt
+6254 3243 Pnt
+5882 3407 Pnt
+6325 3667 Pnt
+6456 3385 Pnt
+6369 1292 Pnt
+1251 1504 Pnt
+6454 789 Pnt
+6533 3108 Pnt
+4451 1007 Pnt
+979 3280 Pnt
+5195 1757 Pnt
+4819 3253 Pnt
+5430 1175 Pnt
+5443 3770 Pnt
+5020 2047 Pnt
+6638 1395 Pnt
+6608 3731 Pnt
+2786 4750 Pnt
+5214 4170 Pnt
+2488 2202 Pnt
+5319 4097 Pnt
+6512 3420 Pnt
+5023 1061 Pnt
+6245 1370 Pnt
+4889 970 Pnt
+2434 3742 Pnt
+4915 2175 Pnt
+5319 3312 Pnt
+6354 1291 Pnt
+2949 1034 Pnt
+6644 4740 Pnt
+4272 3033 Pnt
+4453 1928 Pnt
+5427 3001 Pnt
+6717 2974 Pnt
+6301 563 Pnt
+6186 4865 Pnt
+5615 4493 Pnt
+6633 2619 Pnt
+5125 1956 Pnt
+1549 647 Pnt
+5186 2778 Pnt
+5804 2254 Pnt
+6338 1259 Pnt
+3177 4470 Pnt
+5297 3622 Pnt
+5293 1625 Pnt
+4460 3292 Pnt
+4878 4485 Pnt
+5800 3250 Pnt
+5478 4628 Pnt
+4045 4130 Pnt
+5592 2883 Pnt
+6306 3414 Pnt
+4749 4844 Pnt
+4696 2070 Pnt
+6370 639 Pnt
+6124 3599 Pnt
+2786 1526 Pnt
+6644 3733 Pnt
+3152 4369 Pnt
+5116 4402 Pnt
+6213 797 Pnt
+5921 3396 Pnt
+2079 1347 Pnt
+6634 1389 Pnt
+6231 1177 Pnt
+6545 1297 Pnt
+5994 1512 Pnt
+6413 508 Pnt
+3472 756 Pnt
+5957 1729 Pnt
+6682 1737 Pnt
+5319 966 Pnt
+857 3240 Pnt
+2031 3556 Pnt
+4136 2829 Pnt
+5106 2252 Pnt
+6649 1649 Pnt
+5988 1086 Pnt
+4415 1729 Pnt
+1646 1955 Pnt
+6426 2747 Pnt
+6353 3196 Pnt
+6184 2944 Pnt
+4952 2756 Pnt
+6014 1363 Pnt
+6462 606 Pnt
+6389 2994 Pnt
+5488 4281 Pnt
+4586 2256 Pnt
+3918 3052 Pnt
+6553 3487 Pnt
+5249 4870 Pnt
+5478 3679 Pnt
+5911 3209 Pnt
+3677 2035 Pnt
+6504 1550 Pnt
+1683 2656 Pnt
+5472 922 Pnt
+5802 1317 Pnt
+1859 2127 Pnt
+5494 1420 Pnt
+5673 1275 Pnt
+5145 540 Pnt
+6386 3873 Pnt
+6699 644 Pnt
+5032 4836 Pnt
+5162 1856 Pnt
+6187 3679 Pnt
+5203 2345 Pnt
+2071 4429 Pnt
+6241 1369 Pnt
+4995 4189 Pnt
+5374 3796 Pnt
+6376 4095 Pnt
+5390 1317 Pnt
+6493 1528 Pnt
+6060 1788 Pnt
+3991 719 Pnt
+6722 981 Pnt
+4226 1043 Pnt
+6687 3830 Pnt
+6078 3916 Pnt
+4392 789 Pnt
+6563 3750 Pnt
+5820 3717 Pnt
+3583 744 Pnt
+3168 4229 Pnt
+6412 3117 Pnt
+6499 3274 Pnt
+1754 934 Pnt
+5113 2263 Pnt
+4474 1196 Pnt
+6416 4098 Pnt
+3237 1931 Pnt
+5952 3054 Pnt
+4323 3989 Pnt
+5566 3654 Pnt
+5961 3097 Pnt
+3496 4463 Pnt
+3830 2359 Pnt
+3325 3901 Pnt
+4153 986 Pnt
+5716 3671 Pnt
+6557 1711 Pnt
+6160 4087 Pnt
+6496 4276 Pnt
+6276 3809 Pnt
+4181 4275 Pnt
+5023 461 Pnt
+6308 4015 Pnt
+5953 2911 Pnt
+6680 955 Pnt
+4116 2025 Pnt
+6508 1957 Pnt
+4786 1181 Pnt
+5453 1697 Pnt
+5740 2899 Pnt
+2784 4482 Pnt
+5077 862 Pnt
+6663 2379 Pnt
+5511 651 Pnt
+4524 1462 Pnt
+5546 2014 Pnt
+6689 2075 Pnt
+4767 2486 Pnt
+6271 1315 Pnt
+4911 743 Pnt
+1952 1667 Pnt
+5255 4224 Pnt
+859 2819 Pnt
+6077 2502 Pnt
+5318 2052 Pnt
+5541 2425 Pnt
+2462 3798 Pnt
+4697 3965 Pnt
+6354 2701 Pnt
+6049 4335 Pnt
+6535 2631 Pnt
+3422 1975 Pnt
+6399 2026 Pnt
+5310 2317 Pnt
+2036 1506 Pnt
+6344 2235 Pnt
+5150 1054 Pnt
+6448 2060 Pnt
+5181 3694 Pnt
+6237 2426 Pnt
+6614 4721 Pnt
+4981 4002 Pnt
+6253 4750 Pnt
+5612 643 Pnt
+6737 625 Pnt
+5604 4813 Pnt
+3592 4019 Pnt
+6491 4579 Pnt
+1964 3956 Pnt
+2180 3352 Pnt
+5570 4284 Pnt
+4817 552 Pnt
+5857 4764 Pnt
+5359 2291 Pnt
+5505 456 Pnt
+6629 4726 Pnt
+5870 2715 Pnt
+5762 4180 Pnt
+5204 4245 Pnt
+5369 2512 Pnt
+5969 4717 Pnt
+1343 2318 Pnt
+6109 1793 Pnt
+6371 1935 Pnt
+5491 3368 Pnt
+6712 3072 Pnt
+5764 1196 Pnt
+3848 4297 Pnt
+2952 2461 Pnt
+4802 1629 Pnt
+1168 675 Pnt
+6177 1180 Pnt
+6368 2679 Pnt
+5232 2984 Pnt
+6571 3597 Pnt
+6478 2728 Pnt
+6210 2858 Pnt
+6600 1331 Pnt
+4561 1218 Pnt
+3704 3517 Pnt
+1004 4087 Pnt
+4775 3840 Pnt
+6573 3904 Pnt
+5890 3619 Pnt
+5272 2969 Pnt
+5516 1118 Pnt
+5786 3924 Pnt
+6223 3345 Pnt
+5959 1597 Pnt
+6009 1866 Pnt
+5427 2013 Pnt
+6647 1615 Pnt
+5896 809 Pnt
+4104 3213 Pnt
+2661 3746 Pnt
+6447 618 Pnt
+6373 2688 Pnt
+5169 4285 Pnt
+6480 754 Pnt
+6448 908 Pnt
+3015 3214 Pnt
+4544 650 Pnt
+1205 4553 Pnt
+5482 4077 Pnt
+5102 738 Pnt
+6443 892 Pnt
+6447 3756 Pnt
+6696 4042 Pnt
+6449 3913 Pnt
+6403 4819 Pnt
+6585 4403 Pnt
+5718 2462 Pnt
+4081 2807 Pnt
+3663 2667 Pnt
+5971 869 Pnt
+4501 3238 Pnt
+3292 2041 Pnt
+3880 3873 Pnt
+3338 2669 Pnt
+6376 2022 Pnt
+6060 4072 Pnt
+3377 2046 Pnt
+6091 3930 Pnt
+4369 799 Pnt
+6126 2181 Pnt
+3832 1698 Pnt
+4677 1516 Pnt
+5808 4010 Pnt
+5793 486 Pnt
+4326 1579 Pnt
+6027 598 Pnt
+5314 2454 Pnt
+5440 2696 Pnt
+6703 3043 Pnt
+3140 1085 Pnt
+4840 3582 Pnt
+5411 3252 Pnt
+3884 3122 Pnt
+5563 1830 Pnt
+4503 3764 Pnt
+4088 518 Pnt
+5179 1945 Pnt
+6671 2282 Pnt
+6740 1592 Pnt
+6692 1928 Pnt
+5455 1343 Pnt
+4989 2281 Pnt
+5961 859 Pnt
+5747 3045 Pnt
+1993 4840 Pnt
+5234 1035 Pnt
+6664 3362 Pnt
+5670 3398 Pnt
+1399 1036 Pnt
+5421 1630 Pnt
+6036 3858 Pnt
+4054 880 Pnt
+6691 4377 Pnt
+5904 4358 Pnt
+6656 2759 Pnt
+6516 4598 Pnt
+1337 579 Pnt
+1273 2250 Pnt
+6612 1238 Pnt
+5857 698 Pnt
+5943 970 Pnt
+5923 3150 Pnt
+5393 1559 Pnt
+1336 3729 Pnt
+6011 1412 Pnt
+2243 3953 Pnt
+6468 3826 Pnt
+5203 2353 Pnt
+5310 3317 Pnt
+5307 3538 Pnt
+6734 3134 Pnt
+5146 1883 Pnt
+5829 1910 Pnt
+5338 4436 Pnt
+6704 2785 Pnt
+4189 1314 Pnt
+5907 2181 Pnt
+6745 4524 Pnt
+5566 3324 Pnt
+2175 1790 Pnt
+6723 1115 Pnt
+5690 975 Pnt
+5334 2194 Pnt
+6377 4619 Pnt
+5097 4000 Pnt
+5090 2928 Pnt
+3758 4303 Pnt
+6330 4747 Pnt
+3784 4808 Pnt
+2024 3442 Pnt
+5204 3201 Pnt
+5756 547 Pnt
+4054 4713 Pnt
+4478 1882 Pnt
+6606 1398 Pnt
+5651 2963 Pnt
+1590 2519 Pnt
+6383 4381 Pnt
+6303 4562 Pnt
+5529 4503 Pnt
+5964 4269 Pnt
+2675 4497 Pnt
+6346 813 Pnt
+6395 986 Pnt
+5562 1138 Pnt
+6300 3868 Pnt
+6376 1786 Pnt
+4395 1978 Pnt
+930 1471 Pnt
+6502 1479 Pnt
+4777 496 Pnt
+6046 3967 Pnt
+2405 4671 Pnt
+3238 4824 Pnt
+6430 3987 Pnt
+5150 762 Pnt
+5882 1748 Pnt
+6715 1813 Pnt
+5014 3292 Pnt
+5371 3959 Pnt
+5670 1516 Pnt
+5020 1875 Pnt
+6453 2131 Pnt
+6585 3909 Pnt
+6467 1548 Pnt
+5768 1782 Pnt
+6288 658 Pnt
+2283 2114 Pnt
+3600 1223 Pnt
+6588 3993 Pnt
+5212 3395 Pnt
+6170 1987 Pnt
+4346 3523 Pnt
+1652 3207 Pnt
+5425 822 Pnt
+5028 1371 Pnt
+6330 742 Pnt
+5278 2159 Pnt
+5767 4851 Pnt
+5873 1103 Pnt
+1034 4197 Pnt
+6497 3821 Pnt
+3911 4056 Pnt
+5743 2360 Pnt
+4241 760 Pnt
+6182 3389 Pnt
+5184 1979 Pnt
+5613 2133 Pnt
+6524 3139 Pnt
+4284 3685 Pnt
+5705 4396 Pnt
+6595 1917 Pnt
+6291 2057 Pnt
+3737 781 Pnt
+6708 4257 Pnt
+6407 3248 Pnt
+5317 2669 Pnt
+4894 3543 Pnt
+5132 4615 Pnt
+5843 3603 Pnt
+4046 3217 Pnt
+5243 2478 Pnt
+5370 2895 Pnt
+5239 3681 Pnt
+5628 1860 Pnt
+5218 4655 Pnt
+5424 4329 Pnt
+4553 3502 Pnt
+6348 3580 Pnt
+2275 1108 Pnt
+3013 652 Pnt
+6356 1497 Pnt
+6038 1399 Pnt
+6199 2136 Pnt
+3872 4385 Pnt
+2536 950 Pnt
+3393 2608 Pnt
+6701 4577 Pnt
+5731 1673 Pnt
+6553 1463 Pnt
+5442 1393 Pnt
+1358 2003 Pnt
+5742 3828 Pnt
+5077 2122 Pnt
+6429 1422 Pnt
+6664 4230 Pnt
+5826 3879 Pnt
+5530 4586 Pnt
+5719 4229 Pnt
+1875 3973 Pnt
+5577 778 Pnt
+1510 2801 Pnt
+6469 3341 Pnt
+6239 2921 Pnt
+6209 3122 Pnt
+5475 3082 Pnt
+1209 3702 Pnt
+5914 1465 Pnt
+5633 3528 Pnt
+6683 802 Pnt
+5542 1065 Pnt
+6265 2254 Pnt
+6724 2244 Pnt
+5241 2067 Pnt
+6266 2442 Pnt
+6711 3560 Pnt
+5252 3023 Pnt
+5836 3630 Pnt
+1698 2818 Pnt
+6704 2591 Pnt
+5469 856 Pnt
+6434 2057 Pnt
+4855 4882 Pnt
+6507 3906 Pnt
+5831 3664 Pnt
+3759 2905 Pnt
+6657 1144 Pnt
+5131 736 Pnt
+4121 1700 Pnt
+3547 1183 Pnt
+5269 1692 Pnt
+6195 3272 Pnt
+6312 3315 Pnt
+6584 3454 Pnt
+2388 665 Pnt
+5239 2032 Pnt
+2857 3439 Pnt
+3876 2255 Pnt
+5046 3299 Pnt
+4479 2376 Pnt
+5282 2698 Pnt
+6489 2227 Pnt
+6087 4628 Pnt
+2072 1185 Pnt
+5137 666 Pnt
+6679 4191 Pnt
+4928 3780 Pnt
+5511 4728 Pnt
+3215 459 Pnt
+2122 4552 Pnt
+6452 4072 Pnt
+4303 4593 Pnt
+5716 2093 Pnt
+3310 4110 Pnt
+4733 4521 Pnt
+5510 4368 Pnt
+6511 4159 Pnt
+6392 4180 Pnt
+6059 4305 Pnt
+5186 495 Pnt
+6478 2196 Pnt
+6412 2349 Pnt
+6235 2432 Pnt
+5114 551 Pnt
+6711 4736 Pnt
+3398 3974 Pnt
+1918 3106 Pnt
+5364 3869 Pnt
+6141 2204 Pnt
+6443 2620 Pnt
+1883 3641 Pnt
+5337 4469 Pnt
+6509 3955 Pnt
+5062 4159 Pnt
+3242 3490 Pnt
+4532 2779 Pnt
+2422 4278 Pnt
+941 4671 Pnt
+5753 1208 Pnt
+6027 2434 Pnt
+4482 2332 Pnt
+4673 855 Pnt
+6555 1564 Pnt
+6203 1575 Pnt
+5858 1260 Pnt
+5562 1237 Pnt
+6386 3592 Pnt
+5056 2422 Pnt
+6550 1309 Pnt
+5184 2103 Pnt
+6021 3736 Pnt
+4586 3519 Pnt
+5771 3822 Pnt
+6619 3978 Pnt
+2725 1670 Pnt
+6627 957 Pnt
+5231 1042 Pnt
+1289 3442 Pnt
+4495 1420 Pnt
+5921 4650 Pnt
+6587 4151 Pnt
+6360 3458 Pnt
+6661 4415 Pnt
+3880 2235 Pnt
+3307 4683 Pnt
+3975 2659 Pnt
+1232 675 Pnt
+6217 3374 Pnt
+6000 2330 Pnt
+5050 3122 Pnt
+3500 1145 Pnt
+6304 2201 Pnt
+4387 3953 Pnt
+5515 4719 Pnt
+4939 3795 Pnt
+5128 642 Pnt
+6123 3747 Pnt
+6347 2368 Pnt
+6502 4759 Pnt
+6177 3528 Pnt
+2427 1638 Pnt
+5059 3741 Pnt
+6634 3627 Pnt
+4956 1678 Pnt
+3652 4750 Pnt
+6426 1639 Pnt
+5362 4399 Pnt
+6442 450 Pnt
+3970 650 Pnt
+5779 1660 Pnt
+4068 1161 Pnt
+2989 3715 Pnt
+4620 4171 Pnt
+4402 4497 Pnt
+6506 2097 Pnt
+6387 2255 Pnt
+5166 2925 Pnt
+5957 2359 Pnt
+5449 1646 Pnt
+6731 1276 Pnt
+6725 4394 Pnt
+5351 4058 Pnt
+1860 4238 Pnt
+6461 1581 Pnt
+6191 4566 Pnt
+2955 1275 Pnt
+4437 2307 Pnt
+3570 1896 Pnt
+6579 4163 Pnt
+6307 4015 Pnt
+5767 3899 Pnt
+5166 798 Pnt
+6435 4300 Pnt
+6240 2229 Pnt
+1588 3671 Pnt
+5665 2257 Pnt
+6715 1505 Pnt
+6436 3866 Pnt
+5194 3325 Pnt
+4289 2203 Pnt
+3814 3698 Pnt
+6386 4016 Pnt
+4378 701 Pnt
+5231 1377 Pnt
+1846 2976 Pnt
+5870 3770 Pnt
+5247 2341 Pnt
+3684 697 Pnt
+3076 3115 Pnt
+6328 3641 Pnt
+6286 3826 Pnt
+4210 1651 Pnt
+5408 1460 Pnt
+5697 4164 Pnt
+5208 2101 Pnt
+6687 1851 Pnt
+5607 4474 Pnt
+6145 3919 Pnt
+6410 2078 Pnt
+5340 1744 Pnt
+2431 1130 Pnt
+3385 1103 Pnt
+6100 2101 Pnt
+6690 1828 Pnt
+5660 1651 Pnt
+5249 3809 Pnt
+5186 1714 Pnt
+2472 4889 Pnt
+5391 4112 Pnt
+5512 4584 Pnt
+4827 2898 Pnt
+5023 2664 Pnt
+5076 3852 Pnt
+5869 2265 Pnt
+6599 2175 Pnt
+4279 2466 Pnt
+6581 2081 Pnt
+6531 4622 Pnt
+5972 4670 Pnt
+3187 1236 Pnt
+2872 797 Pnt
+5263 572 Pnt
+4296 4021 Pnt
+1486 3191 Pnt
+5689 1604 Pnt
+6473 2167 Pnt
+4907 1124 Pnt
+6027 1823 Pnt
+2580 4884 Pnt
+5566 4667 Pnt
+6444 4644 Pnt
+6727 4270 Pnt
+5840 2428 Pnt
+6691 2524 Pnt
+5869 4310 Pnt
+5268 2615 Pnt
+6097 4081 Pnt
+4717 1061 Pnt
+5738 4283 Pnt
+6406 4541 Pnt
+6529 4594 Pnt
+1940 4632 Pnt
+886 4256 Pnt
+5891 1888 Pnt
+4644 2518 Pnt
+6405 4596 Pnt
+6278 2508 Pnt
+5799 1645 Pnt
+6526 1619 Pnt
+6066 3990 Pnt
+5013 2638 Pnt
+4567 3741 Pnt
+1739 2053 Pnt
+6078 4299 Pnt
+6639 3723 Pnt
+1340 603 Pnt
+6702 2403 Pnt
+5353 2386 Pnt
+6322 4735 Pnt
+5319 2629 Pnt
+5646 2476 Pnt
+5903 3092 Pnt
+5495 766 Pnt
+5165 3419 Pnt
+6629 2757 Pnt
+5943 3867 Pnt
+4946 888 Pnt
+6572 4075 Pnt
+6230 4191 Pnt
+1298 1938 Pnt
+3336 4601 Pnt
+6253 3587 Pnt
+4589 2965 Pnt
+6318 4747 Pnt
+3875 2424 Pnt
+5085 2038 Pnt
+4782 3170 Pnt
+6588 3009 Pnt
+5877 3185 Pnt
+5063 4699 Pnt
+5730 843 Pnt
+6303 3406 Pnt
+5705 1308 Pnt
+4916 1722 Pnt
+3248 2474 Pnt
+3407 977 Pnt
+2732 896 Pnt
+6558 456 Pnt
+5902 4606 Pnt
+6331 4152 Pnt
+6293 4836 Pnt
+4319 3454 Pnt
+4517 1293 Pnt
+6667 2572 Pnt
+5982 4549 Pnt
+5609 2354 Pnt
+2649 586 Pnt
+3651 1275 Pnt
+2177 2719 Pnt
+5522 452 Pnt
+6600 964 Pnt
+4550 3838 Pnt
+5981 3015 Pnt
+5081 4490 Pnt
+4593 4773 Pnt
+1431 3573 Pnt
+5702 561 Pnt
+876 4637 Pnt
+6336 844 Pnt
+5824 2360 Pnt
+4211 3110 Pnt
+6570 2814 Pnt
+6083 2571 Pnt
+6504 921 Pnt
+6017 4805 Pnt
+5325 3285 Pnt
+5897 951 Pnt
+6434 2898 Pnt
+2743 1336 Pnt
+4958 1789 Pnt
+5756 1336 Pnt
+6741 1266 Pnt
+4192 4670 Pnt
+2651 943 Pnt
+4717 1621 Pnt
+6453 923 Pnt
+5840 3145 Pnt
+6666 3266 Pnt
+3967 1410 Pnt
+5051 3271 Pnt
+6609 2916 Pnt
+2506 1580 Pnt
+5328 897 Pnt
+5015 2815 Pnt
+4657 1721 Pnt
+6557 4697 Pnt
+5852 578 Pnt
+6551 879 Pnt
+5099 4852 Pnt
+5182 1465 Pnt
+6488 597 Pnt
+6386 2801 Pnt
+6174 2988 Pnt
+6735 566 Pnt
+3536 1699 Pnt
+6146 2828 Pnt
+3822 1550 Pnt
+4009 1750 Pnt
+5308 4044 Pnt
+5301 3299 Pnt
+4799 969 Pnt
+5675 942 Pnt
+6448 900 Pnt
+1663 587 Pnt
+6030 2651 Pnt
+4725 3201 Pnt
+6200 3256 Pnt
+4746 943 Pnt
+6636 631 Pnt
+6212 508 Pnt
+5746 2012 Pnt
+6746 1976 Pnt
+4980 703 Pnt
+6356 4093 Pnt
+3575 1472 Pnt
+2542 2139 Pnt
+5470 2052 Pnt
+4682 3019 Pnt
+5420 4804 Pnt
+3974 3121 Pnt
+6600 1653 Pnt
+3811 1617 Pnt
+4899 4293 Pnt
+6180 3989 Pnt
+5109 1385 Pnt
+4841 2485 Pnt
+1147 1540 Pnt
+6336 2839 Pnt
+4359 1955 Pnt
+5662 4625 Pnt
+4134 2996 Pnt
+6703 2731 Pnt
+6546 2266 Pnt
+6661 833 Pnt
+1073 1997 Pnt
+6037 4646 Pnt
+5805 2656 Pnt
+4197 3568 Pnt
+5934 2461 Pnt
+5863 2462 Pnt
+5123 4031 Pnt
+6245 2679 Pnt
+6288 2758 Pnt
+6592 2626 Pnt
+1760 4475 Pnt
+3206 4709 Pnt
+5397 2523 Pnt
+6555 2974 Pnt
+3955 4275 Pnt
+6245 2784 Pnt
+6627 493 Pnt
+5794 548 Pnt
+5253 4329 Pnt
+6011 2704 Pnt
+6262 575 Pnt
+5109 849 Pnt
+5203 874 Pnt
+5607 563 Pnt
+5563 2496 Pnt
+1870 2455 Pnt
+6534 1949 Pnt
+5219 1203 Pnt
+5685 826 Pnt
+6178 2959 Pnt
+4536 4116 Pnt
+6605 4677 Pnt
+3922 1117 Pnt
+5424 2669 Pnt
+3892 1135 Pnt
+4506 4704 Pnt
+5493 3196 Pnt
+1421 2964 Pnt
+6162 3165 Pnt
+3788 453 Pnt
+5725 628 Pnt
+6734 524 Pnt
+6506 2734 Pnt
+6289 3502 Pnt
+2930 756 Pnt
+6597 3366 Pnt
+6259 3488 Pnt
+4941 2161 Pnt
+4468 3629 Pnt
+6026 3236 Pnt
+6593 1235 Pnt
+5236 560 Pnt
+5083 1537 Pnt
+6568 2275 Pnt
+931 2396 Pnt
+2466 3430 Pnt
+5112 2787 Pnt
+5059 3781 Pnt
+6144 961 Pnt
+977 2364 Pnt
+5968 1532 Pnt
+4981 4281 Pnt
+6633 1574 Pnt
+6287 1733 Pnt
+4174 3394 Pnt
+3551 827 Pnt
+5454 4051 Pnt
+5664 1294 Pnt
+5494 3175 Pnt
+2750 4253 Pnt
+6140 1690 Pnt
+6606 3698 Pnt
+1365 3377 Pnt
+3776 2225 Pnt
+6075 3911 Pnt
+6173 1531 Pnt
+6496 1906 Pnt
+2378 3382 Pnt
+5787 1538 Pnt
+6142 3699 Pnt
+6537 3468 Pnt
+4878 2501 Pnt
+6181 1674 Pnt
+4778 840 Pnt
+6476 1387 Pnt
+6358 1553 Pnt
+2683 3862 Pnt
+5188 660 Pnt
+6226 1628 Pnt
+6579 4036 Pnt
+4813 3875 Pnt
+4905 3517 Pnt
+5897 1729 Pnt
+6733 3688 Pnt
+5196 4354 Pnt
+6720 4034 Pnt
+5310 3405 Pnt
+5474 3728 Pnt
+3902 4275 Pnt
+1575 4071 Pnt
+5801 1777 Pnt
+6503 4224 Pnt
+5445 4587 Pnt
+6082 3844 Pnt
+6236 4026 Pnt
+5172 3722 Pnt
+5659 768 Pnt
+6505 991 Pnt
+885 1122 Pnt
+6429 4840 Pnt
+5171 670 Pnt
+5156 1914 Pnt
+6312 766 Pnt
+2578 3285 Pnt
+4906 3037 Pnt
+5506 1962 Pnt
+2507 3725 Pnt
+6033 829 Pnt
+6531 1167 Pnt
+2641 2877 Pnt
+6079 803 Pnt
+4846 3606 Pnt
+6289 1001 Pnt
+4963 3145 Pnt
+3745 1630 Pnt
+4767 1858 Pnt
+5057 2833 Pnt
+5827 1037 Pnt
+5164 4108 Pnt
+1040 594 Pnt
+6103 2335 Pnt
+6658 1698 Pnt
+5253 1738 Pnt
+4220 4189 Pnt
+5543 3030 Pnt
+3567 4699 Pnt
+3041 2123 Pnt
+6614 3289 Pnt
+6143 865 Pnt
+5192 2776 Pnt
+6589 2050 Pnt
+5932 4509 Pnt
+6260 912 Pnt
+5388 3360 Pnt
+6567 2951 Pnt
+4908 4634 Pnt
+4110 2757 Pnt
+3976 3651 Pnt
+6528 3493 Pnt
+2505 3732 Pnt
+6220 965 Pnt
+6326 4178 Pnt
+4024 2863 Pnt
+4648 2424 Pnt
+6736 2948 Pnt
+5387 3780 Pnt
+5311 2716 Pnt
+5181 4330 Pnt
+4110 1598 Pnt
+6208 4256 Pnt
+6632 4367 Pnt
+3890 1259 Pnt
+1519 3649 Pnt
+5989 3099 Pnt
+6727 2018 Pnt
+5201 3671 Pnt
+6198 3284 Pnt
+5901 1056 Pnt
+5191 1808 Pnt
+5388 3917 Pnt
+6439 649 Pnt
+6715 3296 Pnt
+6354 819 Pnt
+5413 3816 Pnt
+6283 1697 Pnt
+5801 1977 Pnt
+5905 2224 Pnt
+6280 3112 Pnt
+5487 3105 Pnt
+6025 4407 Pnt
+6080 2049 Pnt
+6525 1835 Pnt
+6119 2021 Pnt
+5075 3780 Pnt
+5011 1128 Pnt
+6279 2099 Pnt
+6254 2324 Pnt
+4277 1847 Pnt
+1711 662 Pnt
+6102 2242 Pnt
+5452 4504 Pnt
+6635 4499 Pnt
+5382 4045 Pnt
+4646 4860 Pnt
+1111 945 Pnt
+6602 4793 Pnt
+6059 4244 Pnt
+5926 4522 Pnt
+5070 1627 Pnt
+6280 2000 Pnt
+1070 543 Pnt
+5717 2154 Pnt
+5580 499 Pnt
+5929 2498 Pnt
+6576 2220 Pnt
+5737 3697 Pnt
+6376 3731 Pnt
+5155 4743 Pnt
+6182 2767 Pnt
+6598 1395 Pnt
+6161 1615 Pnt
+1049 1976 Pnt
+5701 1563 Pnt
+4690 2249 Pnt
+5308 3081 Pnt
+5305 1183 Pnt
+4412 2866 Pnt
+6590 2517 Pnt
+6165 495 Pnt
+5836 2879 Pnt
+5196 4433 Pnt
+5381 2456 Pnt
+6220 3166 Pnt
+6392 3361 Pnt
+1629 3387 Pnt
+5567 4710 Pnt
+5099 1234 Pnt
+6368 2935 Pnt
+6705 1029 Pnt
+4032 3282 Pnt
+5135 3789 Pnt
+1701 4093 Pnt
+5434 764 Pnt
+5827 1973 Pnt
+4411 2983 Pnt
+2059 4540 Pnt
+6485 2693 Pnt
+6566 2294 Pnt
+5026 1705 Pnt
+6411 3121 Pnt
+6453 1064 Pnt
+5192 1874 Pnt
+4902 2846 Pnt
+6524 3016 Pnt
+3586 897 Pnt
+4999 4491 Pnt
+5267 643 Pnt
+6305 4126 Pnt
+1085 1065 Pnt
+6385 2387 Pnt
+5674 2387 Pnt
+6333 4323 Pnt
+5101 3089 Pnt
+5757 4540 Pnt
+5843 1972 Pnt
+2352 2125 Pnt
+5134 1295 Pnt
+6461 2306 Pnt
+6580 4721 Pnt
+2005 4704 Pnt
+6208 4492 Pnt
+6402 1179 Pnt
+3073 1829 Pnt
+6257 860 Pnt
+945 2780 Pnt
+6565 4815 Pnt
+6185 475 Pnt
+5837 2706 Pnt
+6555 2365 Pnt
+6358 2447 Pnt
+5876 2367 Pnt
+5962 4745 Pnt
+4986 3275 Pnt
+4491 4410 Pnt
+2013 2471 Pnt
+6345 1028 Pnt
+5521 3192 Pnt
+5555 1436 Pnt
+5949 608 Pnt
+6666 4465 Pnt
+5944 4588 Pnt
+4879 1552 Pnt
+2973 501 Pnt
+4269 3156 Pnt
+5236 3354 Pnt
+6249 1109 Pnt
+5609 1643 Pnt
+4450 4103 Pnt
+5751 3878 Pnt
+3236 1564 Pnt
+6365 4873 Pnt
+1570 948 Pnt
+6229 1236 Pnt
+6623 1371 Pnt
+6719 3144 Pnt
+5362 3083 Pnt
+6400 4821 Pnt
+4793 1606 Pnt
+5763 2722 Pnt
+5338 2830 Pnt
+3150 1562 Pnt
+5166 1819 Pnt
+6741 2718 Pnt
+2438 2248 Pnt
+5163 4094 Pnt
+3570 3730 Pnt
+4898 4000 Pnt
+6655 3496 Pnt
+5624 1039 Pnt
+6583 2386 Pnt
+3794 2209 Pnt
+2663 1370 Pnt
+5092 544 Pnt
+6249 4750 Pnt
+5342 4492 Pnt
+5988 2940 Pnt
+5971 706 Pnt
+5094 2951 Pnt
+6379 1785 Pnt
+5857 4156 Pnt
+1651 4850 Pnt
+5572 3284 Pnt
+2195 1545 Pnt
+6554 3705 Pnt
+2204 2748 Pnt
+4177 1116 Pnt
+3542 2868 Pnt
+6451 3691 Pnt
+5389 2095 Pnt
+3198 3115 Pnt
+4869 4440 Pnt
+5632 1819 Pnt
+4459 2519 Pnt
+5802 968 Pnt
+6687 3474 Pnt
+5759 3367 Pnt
+4116 4206 Pnt
+6009 3788 Pnt
+6627 3823 Pnt
+6075 3457 Pnt
+6194 1306 Pnt
+5564 1712 Pnt
+6582 1887 Pnt
+929 2439 Pnt
+5212 4388 Pnt
+5630 1486 Pnt
+6671 3301 Pnt
+5472 3373 Pnt
+3209 3236 Pnt
+2140 1300 Pnt
+5016 3461 Pnt
+3950 1581 Pnt
+6326 1276 Pnt
+5975 3575 Pnt
+5264 1608 Pnt
+6400 1500 Pnt
+5125 4835 Pnt
+6407 1298 Pnt
+5114 4513 Pnt
+5196 3035 Pnt
+6159 1687 Pnt
+6551 3665 Pnt
+5824 1679 Pnt
+4257 4600 Pnt
+6103 1457 Pnt
+6302 4000 Pnt
+6489 3853 Pnt
+6678 1541 Pnt
+3880 2522 Pnt
+5730 4076 Pnt
+1980 3519 Pnt
+4582 4240 Pnt
+4901 1374 Pnt
+4462 3227 Pnt
+5377 1029 Pnt
+3483 3421 Pnt
+6699 3635 Pnt
+5793 4048 Pnt
+5945 3641 Pnt
+6687 714 Pnt
+5923 3211 Pnt
+1344 3819 Pnt
+6604 4886 Pnt
+3567 1708 Pnt
+4443 4606 Pnt
+5795 963 Pnt
+4324 2019 Pnt
+5563 970 Pnt
+4150 4690 Pnt
+6506 3869 Pnt
+6606 3982 Pnt
+5985 1950 Pnt
+5893 3038 Pnt
+846 1504 Pnt
+6447 1737 Pnt
+6489 1140 Pnt
+4841 563 Pnt
+4181 1391 Pnt
+2428 4010 Pnt
+5907 2154 Pnt
+6084 1777 Pnt
+6641 1638 Pnt
+6634 3985 Pnt
+4788 3304 Pnt
+4955 3332 Pnt
+6311 1977 Pnt
+6519 1080 Pnt
+6127 1181 Pnt
+2221 1572 Pnt
+5647 2699 Pnt
+5627 3200 Pnt
+5210 541 Pnt
+6727 3427 Pnt
+2834 1993 Pnt
+6402 1082 Pnt
+4689 3416 Pnt
+5983 827 Pnt
+2775 1585 Pnt
+4729 2180 Pnt
+5334 1237 Pnt
+6692 730 Pnt
+6366 1039 Pnt
+6434 1059 Pnt
+4982 3618 Pnt
+4725 3445 Pnt
+1110 2849 Pnt
+6402 3414 Pnt
+5142 2508 Pnt
+6427 3717 Pnt
+6451 2220 Pnt
+4888 3832 Pnt
+2414 2013 Pnt
+5777 1053 Pnt
+2178 2308 Pnt
+4259 474 Pnt
+5284 457 Pnt
+5651 1326 Pnt
+2727 2665 Pnt
+6565 3079 Pnt
+6462 2966 Pnt
+3413 2272 Pnt
+4911 2234 Pnt
+5953 3066 Pnt
+5727 3397 Pnt
+6610 3080 Pnt
+6453 3169 Pnt
+5939 3392 Pnt
+3860 3394 Pnt
+6051 4485 Pnt
+6085 4602 Pnt
+5013 4570 Pnt
+6660 4535 Pnt
+5356 2609 Pnt
+2289 2822 Pnt
+6444 4354 Pnt
+5098 4402 Pnt
+2417 3572 Pnt
+5152 1196 Pnt
+4775 472 Pnt
+5605 4384 Pnt
+6746 4330 Pnt
+5618 3011 Pnt
+6749 2880 Pnt
+5602 2050 Pnt
+4984 4005 Pnt
+2176 881 Pnt
+5427 4731 Pnt
+2433 539 Pnt
+6322 1842 Pnt
+3988 1542 Pnt
+6328 1574 Pnt
+6740 3849 Pnt
+6405 1735 Pnt
+5311 3889 Pnt
+4583 2572 Pnt
+4514 3675 Pnt
+5294 1293 Pnt
+3407 3082 Pnt
+4229 3070 Pnt
+6712 2182 Pnt
+5984 2234 Pnt
+6207 1769 Pnt
+4692 4727 Pnt
+6219 597 Pnt
+5432 3738 Pnt
+2209 3898 Pnt
+4961 3502 Pnt
+5523 2894 Pnt
+5107 4736 Pnt
+6568 4629 Pnt
+6675 4199 Pnt
+5531 4870 Pnt
+4834 2743 Pnt
+6530 542 Pnt
+6032 4807 Pnt
+4809 3851 Pnt
+5335 2501 Pnt
+5034 2002 Pnt
+6210 578 Pnt
+2566 4858 Pnt
+6649 2555 Pnt
+4810 2035 Pnt
+6343 684 Pnt
+3485 2173 Pnt
+6209 1932 Pnt
+6605 2082 Pnt
+3057 1961 Pnt
+5308 2290 Pnt
+4814 3164 Pnt
+4586 967 Pnt
+6606 3165 Pnt
+1022 3706 Pnt
+6133 2592 Pnt
+6097 4859 Pnt
+6610 2853 Pnt
+2596 3052 Pnt
+5334 3424 Pnt
+4701 4297 Pnt
+4466 3453 Pnt
+6483 2466 Pnt
+5781 4032 Pnt
+6202 4177 Pnt
+6095 2009 Pnt
+5846 2885 Pnt
+5598 4876 Pnt
+5696 3220 Pnt
+5259 571 Pnt
+5497 2153 Pnt
+5412 1642 Pnt
+6643 4189 Pnt
+6005 858 Pnt
+6110 1112 Pnt
+5704 4050 Pnt
+1152 4736 Pnt
+6573 595 Pnt
+3864 4747 Pnt
+4512 557 Pnt
+3890 2584 Pnt
+2855 4161 Pnt
+5885 1667 Pnt
+859 1545 Pnt
+6336 2460 Pnt
+1669 464 Pnt
+4686 3039 Pnt
+5992 1745 Pnt
+6527 4380 Pnt
+6574 1850 Pnt
+5346 2015 Pnt
+5152 3208 Pnt
+5380 1325 Pnt
+6614 871 Pnt
+3845 996 Pnt
+3292 1926 Pnt
+5346 4174 Pnt
+5688 2053 Pnt
+5239 689 Pnt
+6077 3624 Pnt
+6262 2124 Pnt
+2999 2691 Pnt
+6492 1988 Pnt
+2845 3206 Pnt
+6634 1128 Pnt
+6333 1965 Pnt
+5814 1419 Pnt
+1512 3803 Pnt
+5555 1741 Pnt
+6168 3357 Pnt
+6538 3534 Pnt
+4622 755 Pnt
+5590 1640 Pnt
+4687 2603 Pnt
+6167 3214 Pnt
+3270 2131 Pnt
+6721 1427 Pnt
+5716 4012 Pnt
+3010 799 Pnt
+3138 1469 Pnt
+6148 3303 Pnt
+5256 2357 Pnt
+6747 851 Pnt
+5470 648 Pnt
+5010 1605 Pnt
+5090 2292 Pnt
+6307 1923 Pnt
+6500 4316 Pnt
+3939 2459 Pnt
+3745 2027 Pnt
+4092 999 Pnt
+6690 1191 Pnt
+6091 3693 Pnt
+2297 4684 Pnt
+5034 4523 Pnt
+6383 3692 Pnt
+6415 3021 Pnt
+6451 3177 Pnt
+5745 3636 Pnt
+4869 833 Pnt
+5728 3329 Pnt
+5308 878 Pnt
+3610 1186 Pnt
+3781 4294 Pnt
+5818 3304 Pnt
+6099 3146 Pnt
+4131 1399 Pnt
+6535 3542 Pnt
+5007 1588 Pnt
+4513 885 Pnt
+5218 3615 Pnt
+4596 4430 Pnt
+1972 484 Pnt
+6192 3072 Pnt
+6499 4509 Pnt
+5036 3534 Pnt
+5968 2623 Pnt
+5667 4780 Pnt
+4123 3640 Pnt
+4948 4254 Pnt
+1368 2008 Pnt
+6674 4879 Pnt
+6066 4237 Pnt
+6233 3260 Pnt
+5015 4715 Pnt
+5206 1770 Pnt
+1262 3335 Pnt
+5831 1071 Pnt
+5633 1455 Pnt
+6684 1398 Pnt
+5350 954 Pnt
+5934 4673 Pnt
+6430 2536 Pnt
+4986 1867 Pnt
+6676 1728 Pnt
+5764 3530 Pnt
+5467 1851 Pnt
+6549 1208 Pnt
+5542 995 Pnt
+2318 2842 Pnt
+6455 2464 Pnt
+1372 4245 Pnt
+6307 4081 Pnt
+6142 3866 Pnt
+1118 4150 Pnt
+5403 1772 Pnt
+6495 4599 Pnt
+6000 4312 Pnt
+3502 1391 Pnt
+5884 4596 Pnt
+6473 1332 Pnt
+6338 4073 Pnt
+6463 3617 Pnt
+4253 3792 Pnt
+1922 1041 Pnt
+3079 2425 Pnt
+5610 2641 Pnt
+6029 1055 Pnt
+6341 1192 Pnt
+6505 2516 Pnt
+5814 2301 Pnt
+5820 2622 Pnt
+6224 4893 Pnt
+5017 3784 Pnt
+5249 4434 Pnt
+6501 3849 Pnt
+5874 3450 Pnt
+5327 1852 Pnt
+5275 3528 Pnt
+1159 1951 Pnt
+4464 4680 Pnt
+6091 3949 Pnt
+1604 3372 Pnt
+6350 1797 Pnt
+5092 1302 Pnt
+6221 714 Pnt
+3372 1281 Pnt
+1258 688 Pnt
+6643 2023 Pnt
+6707 1471 Pnt
+3589 825 Pnt
+6529 2834 Pnt
+6378 2989 Pnt
+5970 1547 Pnt
+4654 2839 Pnt
+6466 1787 Pnt
+4445 4833 Pnt
+4752 4449 Pnt
+6026 3060 Pnt
+5212 1371 Pnt
+5158 2576 Pnt
+6376 1507 Pnt
+3191 4059 Pnt
+5591 2483 Pnt
+4157 750 Pnt
+2523 2240 Pnt
+5434 1269 Pnt
+6711 689 Pnt
+6536 3813 Pnt
+6223 3866 Pnt
+4949 2900 Pnt
+5339 4746 Pnt
+5731 4108 Pnt
+5331 3834 Pnt
+4901 4386 Pnt
+3068 3680 Pnt
+4745 4403 Pnt
+6234 4818 Pnt
+6542 3828 Pnt
+4357 3063 Pnt
+5882 4112 Pnt
+5303 2343 Pnt
+4217 4410 Pnt
+3245 3263 Pnt
+6721 4096 Pnt
+6348 4686 Pnt
+2213 3328 Pnt
+5879 3355 Pnt
+6458 798 Pnt
+5067 4201 Pnt
+5657 1046 Pnt
+6468 3190 Pnt
+1184 2389 Pnt
+6505 4831 Pnt
+6643 1175 Pnt
+4973 2602 Pnt
+5551 561 Pnt
+3174 2984 Pnt
+5699 3355 Pnt
+4420 2427 Pnt
+6499 2959 Pnt
+6007 921 Pnt
+4736 857 Pnt
+6542 3263 Pnt
+6138 1202 Pnt
+5125 3395 Pnt
+2502 3223 Pnt
+3983 4019 Pnt
+4808 1029 Pnt
+6089 762 Pnt
+6424 632 Pnt
+6665 831 Pnt
+4968 4429 Pnt
+4365 2955 Pnt
+4973 4574 Pnt
+6175 551 Pnt
+3933 2153 Pnt
+5084 972 Pnt
+5895 4776 Pnt
+6016 2397 Pnt
+6715 2923 Pnt
+5958 2953 Pnt
+3928 3192 Pnt
+2540 4666 Pnt
+6247 478 Pnt
+6009 2741 Pnt
+5298 1234 Pnt
+5449 2872 Pnt
+925 1920 Pnt
+4780 3661 Pnt
+6093 2512 Pnt
+6615 2593 Pnt
+6615 488 Pnt
+6254 3213 Pnt
+5639 4758 Pnt
+3776 918 Pnt
+6504 3194 Pnt
+6514 663 Pnt
+4380 4103 Pnt
+1690 884 Pnt
+2726 1435 Pnt
+4384 2588 Pnt
+5791 2828 Pnt
+5371 2718 Pnt
+5148 3876 Pnt
+5191 2422 Pnt
+4398 894 Pnt
+6036 968 Pnt
+6397 3281 Pnt
+6122 1459 Pnt
+5925 4091 Pnt
+1126 3689 Pnt
+6658 2140 Pnt
+5327 1638 Pnt
+4959 2548 Pnt
+5963 1843 Pnt
+6658 2467 Pnt
+5699 2192 Pnt
+4422 865 Pnt
+6710 4169 Pnt
+2769 3539 Pnt
+5572 4074 Pnt
+1881 1944 Pnt
+5829 3489 Pnt
+6492 2200 Pnt
+4245 1292 Pnt
+5699 2837 Pnt
+6751 1753 Pnt
+6005 3827 Pnt
+5595 1662 Pnt
+6705 3901 Pnt
+3738 2368 Pnt
+5126 3330 Pnt
+5168 1890 Pnt
+5476 4351 Pnt
+4569 1740 Pnt
+4550 2542 Pnt
+6457 3603 Pnt
+4051 4418 Pnt
+3017 2471 Pnt
+5124 2907 Pnt
+4927 2680 Pnt
+6650 2092 Pnt
+2706 746 Pnt
+5980 2419 Pnt
+6704 2449 Pnt
+4578 2260 Pnt
+5483 3680 Pnt
+2425 1946 Pnt
+4979 617 Pnt
+6627 4000 Pnt
+6200 4138 Pnt
+5252 1715 Pnt
+4879 2702 Pnt
+5145 687 Pnt
+4463 2617 Pnt
+6041 3933 Pnt
+6263 4087 Pnt
+6087 4290 Pnt
+6614 4445 Pnt
+3892 3420 Pnt
+4246 4591 Pnt
+2123 1790 Pnt
+4742 4485 Pnt
+4958 1898 Pnt
+6656 1881 Pnt
+4573 1274 Pnt
+6256 4290 Pnt
+5117 1281 Pnt
+5431 2302 Pnt
+6680 4541 Pnt
+6074 4608 Pnt
+4144 1383 Pnt
+4777 999 Pnt
+5543 3512 Pnt
+5632 1452 Pnt
+5092 2057 Pnt
+6651 1549 Pnt
+6007 1579 Pnt
+1831 4758 Pnt
+6433 4768 Pnt
+2682 2520 Pnt
+6731 2233 Pnt
+4489 4456 Pnt
+3737 2567 Pnt
+6460 1713 Pnt
+2158 2928 Pnt
+4899 962 Pnt
+6087 4153 Pnt
+6577 2106 Pnt
+2032 2274 Pnt
+5918 4437 Pnt
+6511 2415 Pnt
+6073 4393 Pnt
+6482 2216 Pnt
+5213 2964 Pnt
+5721 2008 Pnt
+3378 2509 Pnt
+5840 2002 Pnt
+6345 2089 Pnt
+5210 4442 Pnt
+6241 4819 Pnt
+1035 3283 Pnt
+5892 2531 Pnt
+6622 4199 Pnt
+5101 1173 Pnt
+5583 4341 Pnt
+2434 4385 Pnt
+4693 2657 Pnt
+6450 4578 Pnt
+5538 3961 Pnt
+5457 2165 Pnt
+6274 4505 Pnt
+5230 1507 Pnt
+2245 860 Pnt
+6371 4226 Pnt
+6154 1499 Pnt
+6390 4346 Pnt
+5125 1498 Pnt
+5457 2674 Pnt
+1742 1555 Pnt
+2850 1911 Pnt
+6116 1516 Pnt
+6546 1332 Pnt
+6277 3730 Pnt
+6475 1175 Pnt
+3724 1194 Pnt
+5299 4571 Pnt
+5449 1638 Pnt
+4605 1558 Pnt
+4960 2879 Pnt
+6229 3874 Pnt
+3922 3300 Pnt
+5361 1973 Pnt
+6735 1688 Pnt
+5886 3678 Pnt
+4791 1844 Pnt
+3414 4627 Pnt
+5211 4722 Pnt
+5340 3654 Pnt
+6598 3324 Pnt
+5165 2597 Pnt
+6679 3680 Pnt
+2095 2166 Pnt
+6245 3642 Pnt
+5065 1083 Pnt
+5975 3863 Pnt
+6487 3462 Pnt
+1159 651 Pnt
+4194 2192 Pnt
+6031 3023 Pnt
+5204 1170 Pnt
+4391 2893 Pnt
+4187 2532 Pnt
+5391 3436 Pnt
+6333 1225 Pnt
+3845 4320 Pnt
+2242 2438 Pnt
+5224 1617 Pnt
+5157 2390 Pnt
+6713 1344 Pnt
+5127 1028 Pnt
+3369 3553 Pnt
+3837 1202 Pnt
+5438 799 Pnt
+5762 3586 Pnt
+6293 1348 Pnt
+6646 1005 Pnt
+6190 1116 Pnt
+5838 840 Pnt
+6413 2461 Pnt
+1493 1521 Pnt
+6391 3821 Pnt
+6409 4300 Pnt
+6448 2242 Pnt
+6371 2004 Pnt
+6166 2210 Pnt
+5180 1583 Pnt
+6477 3983 Pnt
+5360 4183 Pnt
+5838 2509 Pnt
+3040 1225 Pnt
+6397 3862 Pnt
+5156 2799 Pnt
+830 4175 Pnt
+4656 4545 Pnt
+6120 3679 Pnt
+6408 3632 Pnt
+5316 4031 Pnt
+6094 3727 Pnt
+6527 4236 Pnt
+6631 1671 Pnt
+3461 4756 Pnt
+1018 3762 Pnt
+5538 3906 Pnt
+5223 989 Pnt
+6640 2783 Pnt
+6195 2153 Pnt
+5558 4626 Pnt
+5463 1317 Pnt
+1275 2289 Pnt
+4329 2039 Pnt
+6029 1445 Pnt
+6565 1925 Pnt
+1836 4752 Pnt
+3589 4545 Pnt
+5338 2530 Pnt
+6306 448 Pnt
+6493 4738 Pnt
+5290 4149 Pnt
+5975 2624 Pnt
+5938 580 Pnt
+6174 4064 Pnt
+6150 1913 Pnt
+1445 2344 Pnt
+5676 611 Pnt
+1687 839 Pnt
+5649 2057 Pnt
+6103 2118 Pnt
+4670 1731 Pnt
+6535 1692 Pnt
+5622 607 Pnt
+6585 4881 Pnt
+4870 1731 Pnt
+3952 1218 Pnt
+2856 474 Pnt
+6148 2841 Pnt
+6291 1909 Pnt
+3583 518 Pnt
+5762 2001 Pnt
+4066 2331 Pnt
+6092 3008 Pnt
+6666 1897 Pnt
+2226 875 Pnt
+6690 4352 Pnt
+5011 4156 Pnt
+4976 3865 Pnt
+6199 4398 Pnt
+952 3324 Pnt
+5758 4095 Pnt
+3863 3361 Pnt
+5485 2204 Pnt
+5245 4813 Pnt
+6577 4136 Pnt
+6605 3807 Pnt
+6072 1677 Pnt
+5815 3832 Pnt
+4962 4361 Pnt
+5325 2158 Pnt
+4156 3791 Pnt
+5725 4399 Pnt
+5879 4369 Pnt
+6268 1882 Pnt
+6576 2006 Pnt
+4593 2909 Pnt
+3210 1709 Pnt
+5372 628 Pnt
+6172 2715 Pnt
+6573 2548 Pnt
+6705 4686 Pnt
+3485 1523 Pnt
+3892 4772 Pnt
+6379 3057 Pnt
+6023 2354 Pnt
+4284 540 Pnt
+6400 2383 Pnt
+2910 4433 Pnt
+6233 2847 Pnt
+3636 4086 Pnt
+6683 4889 Pnt
+5029 4413 Pnt
+4675 714 Pnt
+5652 2688 Pnt
+5481 945 Pnt
+6520 2537 Pnt
+4899 4424 Pnt
+6159 2909 Pnt
+2434 748 Pnt
+5037 1838 Pnt
+5053 758 Pnt
+5177 774 Pnt
+2869 4730 Pnt
+3236 3748 Pnt
+4856 3394 Pnt
+6227 2803 Pnt
+5152 3964 Pnt
+6749 786 Pnt
+6449 2901 Pnt
+3854 4578 Pnt
+3608 3897 Pnt
+4130 3416 Pnt
+4461 997 Pnt
+5857 2396 Pnt
+1172 1000 Pnt
+6575 771 Pnt
+6541 1038 Pnt
+5329 4701 Pnt
+5182 1204 Pnt
+5725 4038 Pnt
+6747 4107 Pnt
+5553 4400 Pnt
+4574 802 Pnt
+6625 503 Pnt
+4698 616 Pnt
+5842 2126 Pnt
+6703 4658 Pnt
+6199 534 Pnt
+1368 1886 Pnt
+6045 776 Pnt
+5718 4378 Pnt
+5012 674 Pnt
+5937 2197 Pnt
+5603 2821 Pnt
+2408 3178 Pnt
+5584 4060 Pnt
+4736 3447 Pnt
+4637 2274 Pnt
+5043 3347 Pnt
+6306 1975 Pnt
+6612 4422 Pnt
+6158 2104 Pnt
+1511 3703 Pnt
+6606 2361 Pnt
+6492 4469 Pnt
+6185 1794 Pnt
+5712 4417 Pnt
+5883 4670 Pnt
+6002 2435 Pnt
+5316 882 Pnt
+5679 1157 Pnt
+3865 2581 Pnt
+5984 4556 Pnt
+2527 4206 Pnt
+2851 4608 Pnt
+5871 4410 Pnt
+4083 3762 Pnt
+5881 4849 Pnt
+4729 1817 Pnt
+3519 2938 Pnt
+5459 2675 Pnt
+6461 4449 Pnt
+6457 4486 Pnt
+6691 2329 Pnt
+6462 4464 Pnt
+6463 4618 Pnt
+5795 3193 Pnt
+6029 3508 Pnt
+4303 2161 Pnt
+5888 4618 Pnt
+5638 2336 Pnt
+5966 4523 Pnt
+3586 1215 Pnt
+5667 4128 Pnt
+5271 2916 Pnt
+6089 4782 Pnt
+3887 2058 Pnt
+1370 1089 Pnt
+6197 2507 Pnt
+6417 2684 Pnt
+5299 2376 Pnt
+6397 4497 Pnt
+6428 547 Pnt
+6439 2645 Pnt
+6722 2301 Pnt
+5467 2004 Pnt
+2415 1778 Pnt
+5576 449 Pnt
+3176 2352 Pnt
+5569 1927 Pnt
+4395 4796 Pnt
+6674 2625 Pnt
+1523 4693 Pnt
+6413 4747 Pnt
+5137 1088 Pnt
+4872 2909 Pnt
+6393 2722 Pnt
+5390 3114 Pnt
+5179 3500 Pnt
+6460 2675 Pnt
+5913 2678 Pnt
+6393 2919 Pnt
+6029 2341 Pnt
+5124 903 Pnt
+6484 2367 Pnt
+6309 612 Pnt
+1028 2889 Pnt
+4774 2574 Pnt
+4871 2240 Pnt
+1419 612 Pnt
+6114 2723 Pnt
+2762 4258 Pnt
+5189 4809 Pnt
+1077 2009 Pnt
+6652 2107 Pnt
+5780 2237 Pnt
+4850 2854 Pnt
+5341 3733 Pnt
+3001 3902 Pnt
+5012 3585 Pnt
+6634 2916 Pnt
+6432 2482 Pnt
+6373 537 Pnt
+6182 4892 Pnt
+6534 557 Pnt
+823 2861 Pnt
+6643 3232 Pnt
+6007 1255 Pnt
+5040 1375 Pnt
+6502 2742 Pnt
+6616 658 Pnt
+5163 4321 Pnt
+6327 3137 Pnt
+4974 4882 Pnt
+5449 2969 Pnt
+2616 1953 Pnt
+1847 2331 Pnt
+5711 1049 Pnt
+4657 4623 Pnt
+5467 3268 Pnt
+3781 1423 Pnt
+5860 602 Pnt
+6505 822 Pnt
+6728 4750 Pnt
+1879 1709 Pnt
+5554 4738 Pnt
+5532 533 Pnt
+6187 618 Pnt
+6261 2942 Pnt
+5182 1684 Pnt
+6127 1031 Pnt
+1946 4038 Pnt
+5364 1107 Pnt
+6348 2691 Pnt
+4595 1412 Pnt
+3994 3511 Pnt
+3182 1021 Pnt
+5605 2515 Pnt
+6114 2874 Pnt
+4684 4239 Pnt
+5415 3084 Pnt
+6502 801 Pnt
+5651 459 Pnt
+5798 2625 Pnt
+6655 645 Pnt
+6663 2993 Pnt
+2969 1026 Pnt
+4164 1182 Pnt
+3886 4538 Pnt
+6443 3347 Pnt
+5473 2884 Pnt
+5245 991 Pnt
+4581 2612 Pnt
+2642 4117 Pnt
+5411 3469 Pnt
+6739 2656 Pnt
+6540 4509 Pnt
+4552 3664 Pnt
+3213 3893 Pnt
+4339 564 Pnt
+5885 4796 Pnt
+3688 3773 Pnt
+6161 1013 Pnt
+4060 2922 Pnt
+5207 4427 Pnt
+6631 2455 Pnt
+3536 2621 Pnt
+6373 946 Pnt
+6589 2997 Pnt
+4118 4519 Pnt
+5465 474 Pnt
+4058 866 Pnt
+6140 2540 Pnt
+4986 2184 Pnt
+6731 4807 Pnt
+4858 3347 Pnt
+5595 3032 Pnt
+6742 3204 Pnt
+4597 3293 Pnt
+5628 1132 Pnt
+6527 1092 Pnt
+3737 3726 Pnt
+6390 2606 Pnt
+2390 3554 Pnt
+5111 1281 Pnt
+5719 2655 Pnt
+4873 3774 Pnt
+4804 3822 Pnt
+5991 790 Pnt
+6673 907 Pnt
+5166 2526 Pnt
+6396 565 Pnt
+2858 3642 Pnt
+5912 1011 Pnt
+1887 1648 Pnt
+5655 3494 Pnt
+5222 2747 Pnt
+6671 994 Pnt
+4773 3975 Pnt
+5623 3205 Pnt
+6653 3523 Pnt
+4627 1690 Pnt
+3951 2444 Pnt
+4341 1532 Pnt
+5344 3544 Pnt
+3656 4860 Pnt
+2513 4104 Pnt
+6677 3090 Pnt
+6384 3374 Pnt
+1564 3364 Pnt
+4494 4584 Pnt
+5874 638 Pnt
+5066 1171 Pnt
+5599 2880 Pnt
+5552 1308 Pnt
+6589 974 Pnt
+6098 3192 Pnt
+5059 4637 Pnt
+6711 1333 Pnt
+4871 2526 Pnt
+6101 2372 Pnt
+6507 4774 Pnt
+5176 3909 Pnt
+2348 3121 Pnt
+4339 1072 Pnt
+5840 4777 Pnt
+4917 2128 Pnt
+5903 605 Pnt
+6150 1038 Pnt
+5346 2883 Pnt
+5116 4010 Pnt
+2257 4066 Pnt
+5709 1177 Pnt
+6425 3346 Pnt
+1523 4676 Pnt
+6480 1092 Pnt
+3236 3544 Pnt
+6350 1346 Pnt
+5076 471 Pnt
+6106 1291 Pnt
+6331 1584 Pnt
+4337 1199 Pnt
+5173 3105 Pnt
+5410 3665 Pnt
+6467 3409 Pnt
+6418 3438 Pnt
+6036 1529 Pnt
+5552 3753 Pnt
+6132 3570 Pnt
+6589 3006 Pnt
+5891 2997 Pnt
+2193 3487 Pnt
+6468 3101 Pnt
+880 1045 Pnt
+3287 3655 Pnt
+6290 4521 Pnt
+5204 551 Pnt
+5610 4829 Pnt
+6590 681 Pnt
+6021 1261 Pnt
+6527 1456 Pnt
+4689 4193 Pnt
+6625 4056 Pnt
+1164 571 Pnt
+5491 4032 Pnt
+6736 3783 Pnt
+1768 948 Pnt
+5369 4234 Pnt
+5526 2038 Pnt
+4901 3107 Pnt
+6679 3454 Pnt
+3376 4548 Pnt
+4105 3926 Pnt
+5334 2093 Pnt
+5993 564 Pnt
+5802 1413 Pnt
+4521 3843 Pnt
+3362 2956 Pnt
+6155 2803 Pnt
+5065 2210 Pnt
+6301 1200 Pnt
+1416 2390 Pnt
+1497 2103 Pnt
+6306 926 Pnt
+5883 2989 Pnt
+4526 1325 Pnt
+4315 2161 Pnt
+5986 1275 Pnt
+3629 3376 Pnt
+6066 1492 Pnt
+5948 3486 Pnt
+6437 3603 Pnt
+2447 3001 Pnt
+6473 1459 Pnt
+6440 1614 Pnt
+6665 3755 Pnt
+6464 3575 Pnt
+5510 3412 Pnt
+5422 3357 Pnt
+2998 3463 Pnt
+6045 3452 Pnt
+6644 2798 Pnt
+5607 3013 Pnt
+6546 2581 Pnt
+4051 2320 Pnt
+5874 3782 Pnt
+1933 1221 Pnt
+960 4603 Pnt
+5683 846 Pnt
+5155 4087 Pnt
+6265 2017 Pnt
+6555 650 Pnt
+6360 1250 Pnt
+5124 927 Pnt
+5132 2285 Pnt
+6240 872 Pnt
+5621 2967 Pnt
+6331 2981 Pnt
+5802 1452 Pnt
+5492 4256 Pnt
+1066 1588 Pnt
+6539 1482 Pnt
+5968 1763 Pnt
+6049 797 Pnt
+2931 2989 Pnt
+4650 4112 Pnt
+5968 818 Pnt
+3727 4301 Pnt
+6560 468 Pnt
+5181 3591 Pnt
+6551 3098 Pnt
+6458 3549 Pnt
+5821 1409 Pnt
+6323 1053 Pnt
+5226 4220 Pnt
+4936 1330 Pnt
+4644 1579 Pnt
+5939 3395 Pnt
+5265 2402 Pnt
+6548 1772 Pnt
+6240 4178 Pnt
+1599 3712 Pnt
+5937 1872 Pnt
+6699 1205 Pnt
+4277 2416 Pnt
+6286 627 Pnt
+5846 3398 Pnt
+4709 2405 Pnt
+3015 3167 Pnt
+4929 3733 Pnt
+3040 2692 Pnt
+5672 1273 Pnt
+6714 3354 Pnt
+6500 4092 Pnt
+6308 3952 Pnt
+6095 775 Pnt
+6287 4099 Pnt
+2666 2279 Pnt
+5500 1520 Pnt
+4724 3050 Pnt
+4273 3919 Pnt
+5006 2475 Pnt
+6536 1567 Pnt
+5687 4223 Pnt
+5570 2548 Pnt
+4786 4108 Pnt
+5186 1180 Pnt
+1285 4659 Pnt
+6236 4827 Pnt
+6113 4603 Pnt
+5764 3943 Pnt
+6499 1822 Pnt
+6506 4353 Pnt
+4311 4439 Pnt
+5313 668 Pnt
+6548 4597 Pnt
+6283 2555 Pnt
+4960 1976 Pnt
+2678 2532 Pnt
+3348 1839 Pnt
+6064 1911 Pnt
+6426 1805 Pnt
+1830 3800 Pnt
+5409 3657 Pnt
+2439 3952 Pnt
+4823 4552 Pnt
+6604 925 Pnt
+6038 1087 Pnt
+1228 3251 Pnt
+6361 4460 Pnt
+4671 4121 Pnt
+5460 1946 Pnt
+6417 1791 Pnt
+2817 2097 Pnt
+6337 4162 Pnt
+5103 3169 Pnt
+6506 3913 Pnt
+5960 4120 Pnt
+4952 2670 Pnt
+6265 1300 Pnt
+6641 3290 Pnt
+4846 2702 Pnt
+5164 1361 Pnt
+6145 4344 Pnt
+2641 1058 Pnt
+6638 1863 Pnt
+6375 2311 Pnt
+5736 2171 Pnt
+5357 2539 Pnt
+6265 2567 Pnt
+2556 1099 Pnt
+5671 2723 Pnt
+4860 4724 Pnt
+5217 1211 Pnt
+6745 4590 Pnt
+6415 2472 Pnt
+1715 4125 Pnt
+5154 4595 Pnt
+4668 1418 Pnt
+5622 2341 Pnt
+3763 2944 Pnt
+3306 3343 Pnt
+6751 3621 Pnt
+5638 3715 Pnt
+6735 2169 Pnt
+5122 2241 Pnt
+5574 4825 Pnt
+4384 3738 Pnt
+3896 2631 Pnt
+2496 636 Pnt
+5180 3385 Pnt
+5096 968 Pnt
+6689 491 Pnt
+5429 4434 Pnt
+5629 4311 Pnt
+4406 2059 Pnt
+6546 4280 Pnt
+5447 1075 Pnt
+5052 3453 Pnt
+6529 1280 Pnt
+3340 1751 Pnt
+3899 1631 Pnt
+6153 4403 Pnt
+6361 4425 Pnt
+4993 4613 Pnt
+4094 4841 Pnt
+6153 2484 Pnt
+4810 945 Pnt
+6213 2661 Pnt
+6579 2822 Pnt
+6307 1417 Pnt
+3286 2764 Pnt
+3201 2626 Pnt
+5185 3935 Pnt
+3894 474 Pnt
+5029 1754 Pnt
+4765 3630 Pnt
+6650 1745 Pnt
+6751 2494 Pnt
+5580 2364 Pnt
+6162 1842 Pnt
+2909 4043 Pnt
+4320 1822 Pnt
+4054 3168 Pnt
+5935 1618 Pnt
+6367 1946 Pnt
+4898 3351 Pnt
+6660 2828 Pnt
+6563 4064 Pnt
+2380 2025 Pnt
+4897 1639 Pnt
+5165 3270 Pnt
+5323 4353 Pnt
+6652 4421 Pnt
+5384 2480 Pnt
+4970 3368 Pnt
+6210 4807 Pnt
+1021 1017 Pnt
+6142 3786 Pnt
+5455 4159 Pnt
+6582 741 Pnt
+5385 1466 Pnt
+6084 571 Pnt
+1862 2236 Pnt
+6152 4676 Pnt
+4311 792 Pnt
+5868 4310 Pnt
+% End plot #1
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+686 4899 N
+686 448 L
+6261 0 V
+0 4451 V
+-6261 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica

@@ -95,9 +95,7 @@ class MutexStack:
         self._lock = threading.Lock()
         LU = mpc(LD.real,RU.imag)
         RD = mpc(RU.real,LD.imag)
-        print(LD, RU, _n)
         self.stack = [LD,RU,varArg(LD,RD,_n),varArg(RD,RU,_n),varArg(RU,LU,_n),varArg(LU,LD,_n)]
-        print(self.stack)
 
     def pop(self):
         n = self.n
@@ -206,7 +204,7 @@ mp.dps = 100
 n = int(sys.argv[1])
 threads = multiprocessing.cpu_count()
 LD = mpc(1 - n,'0')
-RU = mpc('1.74','10000')
+RU = mpc('1.74','100')
 start = time.time()
 S = MutexStack(LD,RU,n)
 R = MutexAnswer(threads)
