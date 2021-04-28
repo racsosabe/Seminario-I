@@ -174,7 +174,7 @@ def solve(S, R, id):
         val = S.work(id)
 
 threads = multiprocessing.cpu_count()
-S = MutexStack(complex(-1,0),complex(1,50000),3)
+S = MutexStack(complex(-1, 0), complex(1, 50000), 3)
 R = MutexAnswer()
 with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
     for index in range(threads):

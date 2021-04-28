@@ -115,30 +115,6 @@ class MutexStack:
     def size(self):
         return len(self.stack)
 
-
-class MutexAnswer:
-    def __init__(self, threads):
-        self.v = []
-        self.len = 0
-        self._lock = threading.Lock()
-
-    def push(self, x):
-        with self._lock:
-            self.v.append(x)
-            self.len += 1
-
-    def pop(self):
-        with self._lock:
-            if self.v:
-                res = self.v.pop();
-                self.len -= 1
-                return res
-            else:
-                return mpc('3','0')
-
-    def size(self):
-        return self.len
-
 def compute(a, n):
     LD = a[0]
     RU = a[1]
@@ -176,45 +152,74 @@ def compute(a, n):
             print("Fatal Error. Sum of partitions isn't equal to total")
         return [2, LD, M1, V0, FD, FM, V3 - FU, M2, RU, -FM, V1 - FD, V2, FU]
 
-def initialize(S, R, n, nodes):
+def initialize(S, n, nodes):
     while S.size() < 6 * nodes:
         cur = S.pop()
+        if len(cur) == 0: break
         val = compute(cur, n)
         if val[0] == 1:
-            R.push(val[1])
+            with open(outputname, 'a') as out:
+                out.write(str(val[1].real))
+                out.write(' ')
+                out.write(str(val[1].imag))
+                out.write(' ')
+                out.write(str(abs(f(val[1], n))))
+                out.write('\n')
         elif val[0] == 2:
             S.push(val[1:])
 
 
-def solve(S, R, id, n):
+def solve(S, id, n):
+    global outputname
     failed = 0
     while failed < 12:
         cur = S.pop();
         if len(cur) == 6:
             val = compute(cur, n)
             if val[0] == 1:
-                R.push(val[1])
+                with open(outputname, 'a') as out:
+                    out.write(str(val[1].real))
+                    out.write(' ')
+                    out.write(str(val[1].imag))
+                    out.write(' ')
+                    out.write(str(abs(f(val[1], n))))
+                    out.write('\n')
             elif val[0] == 2:
                 S.push(val[1:])
             failed = 0
         else:
             failed += 1
 
+rate = 10000
+limit = 1000000
 mp.dps = 100
 n = int(sys.argv[1])
+outputname = 'zeros{:d}.txt'.format(n)
+print(outputname)
 threads = multiprocessing.cpu_count()
-LD = mpc(1 - n,'0')
-RU = mpc('1.74','100')
-start = time.time()
-S = MutexStack(LD,RU,n)
-R = MutexAnswer(threads)
-initialize(S, R, n, threads)
-with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
-    for index in range(threads):
-        executor.submit(solve, S, R, index, n)
-end = time.time()
-res = R.pop()
-total = R.size()
-while res.real <= 1:
-    print(res.real, res.imag)
-    res = R.pop()
+
+with open('checkpoint', 'r') as Stdin:
+    Limag = int(Stdin.read())
+    Rimag = rate + Limag
+
+if Limag == 0:
+    with open(outputname, 'w') as out:
+        out.write('')
+
+while Limag < limit:
+    LD = mpc(1 - n, str(Limag))
+    RU = mpc('1.74', str(Rimag))
+    start = time.time()
+    S = MutexStack(LD, RU, n)
+    initialize(S, n, threads)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
+        for index in range(threads):
+            executor.submit(solve, S, index, n)
+    end = time.time()
+    print("Ended processing range [{:d}, {:d}] in {:f} seconds".format(Limag, Rimag, end - start))
+    Limag += rate
+    Rimag += rate
+    with open('checkpoint', 'w') as check:
+        check.write(str(Limag))
+
+print("Ended processing the full range [0, {:d}] :D".format(limit))
