@@ -21,7 +21,7 @@ struct number{
 	}
 };
 
-int T = 10000;
+int T = 1000000;
 
 long double N(int n){
 	return T * log(n) / (2.0 * acos(-1));

@@ -16,26 +16,29 @@ def getMin(a, b):
     return abs(prod.imag / abs(b-a))
 
 def f(x, n):
+    global L
     ans = 1
     for i in range(2,n+1):
         ans += exp(-x * log(i))
     return ans
 
 def df(x, n):
+    global L
     ans = 0
     for i in range(2,n+1):
         ans += - exp(-x * log(i)) * log(i)
     return ans
 
 def M(s1, s2, n):
+    global L
     ans = 0
     for i in range(2,n+1):
         ans += exp((-min(s1.real,s2.real)) * log(i)) * log(i) * log(i)
     return ans
 
-def isGreater(s1, s2, localM, n):
+def isGreater(s1, s2, n):
     L = getMin(f(s1, n),f(s2, n))
-    R = localM * norm2(s1 - s2) / 8
+    R = M(s1, s2, n) * norm2(s1 - s2) / 8
     EPS = mpf('10') ** (-20)
     return L > R + EPS
 
@@ -43,18 +46,18 @@ def enrect(z1, z2, x):
     return min(z1.real, z2.real) <= x.real <= max(z1.real, z2.real) and min(z1.imag, z2.imag) <= x.imag <= max(z1.imag, z2.imag)
 
 def varArg(s1, s2, n):
-    localM = M(s1,s2,n)
     t0 = mpf(0)
     t = mpf(1)
     L = s1
     d = s2 - s1
     ans = mpf(0)
     EPS1 = mpf('10') ** (-25)
-    EPS2 = mpf('10') ** (-80)
-    EPS3 = mpf('10') ** (-40)
+    EPS2 = mpf('10') ** (-50)
+    EPS3 = mpf('10') ** (-35)
     while t0 + EPS1 < 1:
+        t = mpf(abs((s2 - L) / (s2 - s1)))
         R = L + t * d
-        while (not isGreater(L,R,localM,n)) and t > EPS2:
+        while (not isGreater(L,R,n)) and t > EPS2:
             t /= 2
             R = L + t * d
         if t <= EPS2:
@@ -173,7 +176,7 @@ def solve(S, id, n):
     global outputname
     failed = 0
     while failed < 12:
-        cur = S.pop();
+        cur = S.pop()
         if len(cur) == 6:
             val = compute(cur, n)
             if val[0] == 1:
@@ -206,9 +209,13 @@ if Limag == 0:
     with open(outputname, 'w') as out:
         out.write('')
 
+L = [0 if i == 0 else log(i) for i in range(n + 1)]
+
 while Limag < limit:
     LD = mpc(1 - n, str(Limag))
     RU = mpc('1.74', str(Rimag))
+    print("Starting range ", Limag, Rimag)
+    print(LD, RU)
     start = time.time()
     S = MutexStack(LD, RU, n)
     initialize(S, n, threads)
