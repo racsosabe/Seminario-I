@@ -5,6 +5,8 @@ import time
 import sys
 import multiprocessing
 import concurrent.futures
+from colorama import Fore
+from colorama import Style
 
 def norm2(a):
     return a.real**2 + a.imag**2
@@ -52,8 +54,8 @@ def varArg(s1, s2, n):
     d = s2 - s1
     ans = mpf(0)
     EPS1 = mpf('10') ** (-25)
-    EPS2 = mpf('10') ** (-50)
-    EPS3 = mpf('10') ** (-35)
+    EPS2 = mpf('10') ** (-80)
+    EPS3 = mpf('10') ** (-30)
     while t0 + EPS1 < 1:
         t = mpf(abs((s2 - L) / (s2 - s1)))
         R = L + t * d
@@ -156,11 +158,13 @@ def compute(a, n):
         return [2, LD, M1, V0, FD, FM, V3 - FU, M2, RU, -FM, V1 - FD, V2, FU]
 
 def initialize(S, n, nodes):
+    global cnt
     while S.size() < 6 * nodes:
         cur = S.pop()
         if len(cur) == 0: break
         val = compute(cur, n)
         if val[0] == 1:
+            cnt += 1
             with open(outputname, 'a') as out:
                 out.write(str(val[1].real))
                 out.write(' ')
@@ -174,12 +178,14 @@ def initialize(S, n, nodes):
 
 def solve(S, id, n):
     global outputname
+    global cnt
     failed = 0
     while failed < 12:
         cur = S.pop()
         if len(cur) == 6:
             val = compute(cur, n)
             if val[0] == 1:
+                cnt += 1
                 with open(outputname, 'a') as out:
                     out.write(str(val[1].real))
                     out.write(' ')
@@ -193,8 +199,8 @@ def solve(S, id, n):
         else:
             failed += 1
 
-rate = 1000
-limit = 100000
+rate = 10000
+limit = 1000000
 mp.dps = 100
 n = int(sys.argv[1])
 outputname = 'zeros{:d}.txt'.format(n)
@@ -214,8 +220,10 @@ L = [0 if i == 0 else log(i) for i in range(n + 1)]
 while Limag < limit:
     LD = mpc(1 - n, str(Limag))
     RU = mpc('1.74', str(Rimag))
-    print("Starting range ", Limag, Rimag)
+    print(f'{Fore.GREEN}Starting range {Limag}, {Rimag}{Style.RESET_ALL}')
     print(LD, RU)
+    print("Expected zeros: {}".format(rate * log(n) / 2.0 / acos(-1)))
+    cnt = 0
     start = time.time()
     S = MutexStack(LD, RU, n)
     initialize(S, n, threads)
@@ -224,6 +232,9 @@ while Limag < limit:
             executor.submit(solve, S, index, n)
     end = time.time()
     print("Ended processing range [{:d}, {:d}] in {:f} seconds".format(Limag, Rimag, end - start))
+    print("Found zeros: {}".format(cnt))
+    if abs(cnt - rate * log(n) / 2.0 / acos(-1)) > 2:
+        print(f'{Fore.RED}Error{Style.RESET_ALL} here in range [{Limag}, {Rimag}]')
     Limag += rate
     Rimag += rate
     with open('checkpoint', 'w') as check:

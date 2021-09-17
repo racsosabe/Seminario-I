@@ -9,6 +9,7 @@ int main(){
 	string s;
 	int cnt = 0;
 	while(getline(cin, s)){
+		if(s.empty()) continue;
 		if(used.count(s)) continue;
 		cnt += 1;
 		used.emplace(s);
